@@ -1,0 +1,1 @@
+![[Python As Fast as Possible - Learn Python in ~75 Minutes 7-29 screenshot.png]]

@@ -1,0 +1,7 @@
+[[def]]
+[[print()]]
+[[input()]]
+[[range()]]
+[[enumerate()]]
+[[map()]]
+[[filter()]]

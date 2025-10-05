@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "1b619adda2358757",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb38100c9421a59",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c999fcfc33630b8e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "funcitons/map().md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "map()"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d20aca81063efbfb",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ff5fdef8f9fc9c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16af218cebc77748",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "650079399c1f7a84",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "dbd73761cb4e65d7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9d9419e102bf913c",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b99c589168143e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b973d72a791a3ff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "while loop.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for while loop"
+            }
+          },
+          {
+            "id": "6dae419cc40bb951",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "while loop.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from while loop"
+            }
+          },
+          {
+            "id": "4ed6b70c1e82a558",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a786872f41c13961",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "while loop.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of while loop"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c999fcfc33630b8e",
+  "lastOpenFiles": [
+    "funcitons/Lambda.md",
+    "funcitons/print().md",
+    "funcitons/range().md",
+    "funcitons/enumerate().md",
+    "funcitons/filter().md",
+    "funcitons/input().md",
+    "funcitons/def.md",
+    "funcitons/Scope.md",
+    "basics/datatypes/set().md",
+    "basics/datatypes/list and tuples.md",
+    "basics/datatypes/fstring.md",
+    "basics/datatypes/dict().md",
+    "basics/datatypes/args and kwargs.md",
+    "basics/Comprehensions.md",
+    "basics/variables.md",
+    "operations/Conditional Operators.md",
+    "operations/slice operator.md",
+    "operations/Arithmetic Operator.md",
+    "funcitons/map().md",
+    "loops/for loop.md",
+    "Basics of Python.md",
+    "Datatypes.md",
+    "Functions.md",
+    "basics/errors/try-except-finally.md",
+    "basics/errors/try-except.md",
+    "operations/Chained Conditionals.md",
+    "Untitled 1",
+    "basics/errors",
+    "basics",
+    "methods",
+    "basics/datatypes",
+    "operations",
+    "loops",
+    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 40-7 screenshot.png",
+    "pngs/Pasted image 20251003195726.png",
+    "pngs/Pasted image 20251003195612.png",
+    "pngs/Pasted image 20251003191454.png",
+    "pngs/Pasted image 20251002223026.png",
+    "pngs/Pasted image 20251002221406.png",
+    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 12-28 screenshot.png",
+    "funcitons",
+    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 4-56 screenshot.png",
+    "pngs",
+    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 9-26 screenshot.png",
+    "Python As Fast as Possible - Learn Python in ~75 Minutes 4-56 screenshot 1.png"
+  ]
+}
