@@ -5,3 +5,4 @@
 [[enumerate()]]
 [[map()]]
 [[filter()]]
+[[sum()]]

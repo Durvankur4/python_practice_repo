@@ -1,58 +1,37 @@
 {
   "main": {
-    "id": "1b619adda2358757",
+    "id": "448fea718145788a",
     "type": "split",
     "children": [
       {
-        "id": "7eb38100c9421a59",
+        "id": "4585330f20b71236",
         "type": "tabs",
         "children": [
           {
-            "id": "c999fcfc33630b8e",
+            "id": "607083e2470fb1d6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Functions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Functions"
-            }
-          },
-          {
-            "id": "bb2412574e3cda0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Good Questions to Practice.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Good Questions to Practice"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "d20aca81063efbfb",
+    "id": "c3eee3c2acb8cc08",
     "type": "split",
     "children": [
       {
-        "id": "9ff5fdef8f9fc9c5",
+        "id": "42522ff7537d75a8",
         "type": "tabs",
         "children": [
           {
-            "id": "16af218cebc77748",
+            "id": "0144c36832724109",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -65,7 +44,7 @@
             }
           },
           {
-            "id": "650079399c1f7a84",
+            "id": "421fe8d2f8cf190e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -82,7 +61,7 @@
             }
           },
           {
-            "id": "dbd73761cb4e65d7",
+            "id": "4fb7736282338937",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -98,20 +77,20 @@
     "width": 300
   },
   "right": {
-    "id": "9d9419e102bf913c",
+    "id": "c980c9d0b3e2fb2e",
     "type": "split",
     "children": [
       {
-        "id": "8b99c589168143e7",
+        "id": "c92b2e073a920983",
         "type": "tabs",
         "children": [
           {
-            "id": "0b973d72a791a3ff",
+            "id": "4c204383923401f2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "while loop.md",
+                "file": "Welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,25 +100,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for while loop"
+              "title": "Backlinks for Welcome"
             }
           },
           {
-            "id": "6dae419cc40bb951",
+            "id": "1afafde684a6232f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "while loop.md",
+                "file": "Welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from while loop"
+              "title": "Outgoing links from Welcome"
             }
           },
           {
-            "id": "4ed6b70c1e82a558",
+            "id": "b33823bf8d8d2b69",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -154,18 +133,18 @@
             }
           },
           {
-            "id": "a786872f41c13961",
+            "id": "6c5d6c0a086174c3",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "while loop.md",
+                "file": "Welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of while loop"
+              "title": "Outline of Welcome"
             }
           }
         ]
@@ -186,53 +165,8 @@
       "bases:Create new base": false
     }
   },
-  "active": "bb2412574e3cda0b",
+  "active": "607083e2470fb1d6",
   "lastOpenFiles": [
-    "Good Questions to Practice.md",
-    "basics/datatypes/unpacking.md",
-    "Functions.md",
-    "basics/variables.md",
-    "basics/Comprehensions.md",
-    "operations/Arithmetic Operator.md",
-    "operations/slice operator.md",
-    "operations/Conditional Operators.md",
-    "operations/Chained Conditionals.md",
-    "funcitons/def.md",
-    "funcitons/Scope.md",
-    "funcitons/sum().md",
-    "funcitons/range().md",
-    "funcitons/map().md",
-    "funcitons/print().md",
-    "funcitons/Lambda.md",
-    "funcitons/input().md",
-    "funcitons/filter().md",
-    "funcitons/enumerate().md",
-    "Operators.md",
-    "methods.md",
-    "Loops.md",
-    "Errors.md",
-    "Basics of Python.md",
-    "Datatypes.md",
-    "loops/for loop.md",
-    "Django",
-    "Untitled 1",
-    "basics/errors",
-    "basics",
-    "methods",
-    "basics/datatypes",
-    "operations",
-    "loops",
-    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 40-7 screenshot.png",
-    "pngs/Pasted image 20251003195726.png",
-    "pngs/Pasted image 20251003195612.png",
-    "pngs/Pasted image 20251003191454.png",
-    "pngs/Pasted image 20251002223026.png",
-    "pngs/Pasted image 20251002221406.png",
-    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 12-28 screenshot.png",
-    "funcitons",
-    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 4-56 screenshot.png",
-    "pngs",
-    "pngs/Python As Fast as Possible - Learn Python in ~75 Minutes 9-26 screenshot.png",
-    "Python As Fast as Possible - Learn Python in ~75 Minutes 4-56 screenshot 1.png"
+    "Django basics.md"
   ]
 }

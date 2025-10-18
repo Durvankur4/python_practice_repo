@@ -13,8 +13,8 @@ print(fruits)  # {'apple', 'banana', 'cherry'}
 # Empty set
 empty = set() # correct
 empty2 = {}  # wrong
-print(empty)  # set() 
-print(empty2)  # dict()
+print(empty)  # type set() 
+print(empty2)  # type dict()
 
 ```
 

@@ -1,3 +1,7 @@
+used to unpack elements of a list into separate elements
+
+
+
 If you have a [[list and tuples]], `*` will unpack it into separate positional arguments.
 
 ```
