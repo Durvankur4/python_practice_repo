@@ -76,3 +76,42 @@
 
 # 6 ---------------------------------------------------------------------#
 
+# n = int(input('enter the no of rows in the star : '))
+
+# for i in range(1,n+1):
+#     print('*' * i)
+
+
+
+# 7 ---------------------------------------------------------------------#
+
+# num = input("enter the number : ")
+# print(f'the length of the number is {len(num)}.')
+
+
+
+# 8 ---------------------------------------------------------------------#
+
+# num = list(input("enter the number : "))
+# int_list = list(map(int,num))
+# total_sum = 0 
+# for i in range(len(int_list)+1):
+#     total_sum += i 
+# print(f'the total sum of the digits in the number is {total_sum}')
+
+
+
+# 9 ---------------------------------------------------------------------#
+
+# num = input("enter the number : ")
+# print(f'reversed number is {num[::-1]}')
+
+
+
+# 10 ---------------------------------------------------------------------#
+
+# for i in range(1,11):
+#     print("----------------------------------")
+#     for j in range(1,11):
+#         print(f"{i}*{j}={i*j}")
+    
