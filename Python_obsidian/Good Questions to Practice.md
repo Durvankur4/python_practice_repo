@@ -3,3 +3,9 @@
 
 ### 3. Calculate the factorial of a number.
 ### 4. Count vowels in a string.
+
+### 5. Write a function to find GCD of two numbers.
+
+### 6.
+### 7.
+### 8.
