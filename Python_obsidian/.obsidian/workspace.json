@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Good Questions to Practice.md",
+                "file": "methods.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Good Questions to Practice"
+              "title": "methods"
             }
           }
         ],
@@ -188,9 +188,15 @@
   },
   "active": "bb2412574e3cda0b",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "methods.md",
     "Errors.md",
     "Functions.md",
+=======
+    "Errors.md",
+    "Functions.md",
+    "methods.md",
+>>>>>>> b0b7bdf3311dc514267186dd7c8dfeed1d01b354
     "Loops.md",
     "operations/slice operator.md",
     "loops/while loop.md",

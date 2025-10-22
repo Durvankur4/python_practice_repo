@@ -58,3 +58,27 @@
 #         return calc_gcd(b,a%b)
 
 # print(f"GCD is : {calc_gcd(num1,num2)}")
+
+
+
+# 24 ---------------------------------------------------------------------#
+
+# def convert_temperatures(value,degree):
+#     ans = 0 
+#     if degree in ("C","c") :
+#         ans = (value * 9/5) + 32 
+#         print(f"the converted value is {ans} degree Farenheit")
+    
+#     elif degree in ("f","F") :
+#         ans = (value - 32) * 5/9
+#         print(f"the converted value is {ans} degree Celsius")
+#     else:
+#         print("enter valid input.") 
+
+# temperature_value = int(input("enter value : "))
+# temperature_degree = input("enter Celsius or Farenheit (C/F) : ")
+
+
+# convert_temperatures(temperature_value,temperature_degree)
+
+
