@@ -82,3 +82,56 @@
 # convert_temperatures(temperature_value,temperature_degree)
 
 
+
+# 25 ---------------------------------------------------------------------#
+
+# word = input('enter a word to check for palindrome : ')
+# word = word.lower()
+
+# if word == word[::-1]:
+#     print('its a palindorme')
+# else:
+#     print('not a palindrome')
+
+
+
+# 26 ---------------------------------------------------------------------#
+
+# sentence = input('enter a sentence to count no of letters : ')
+# word_array = sentence.split()
+# # count = 0
+# print(len(word_array))
+
+# # for i in word_array :
+# #     count += len(i)
+# # print(f'there are {count} letters')
+
+
+
+# 27 ---------------------------------------------------------------------#
+
+# sentence = input('enter a sentence to count no of letters : ')
+# collector = [] 
+# for i in sentence:
+#    if i not in ["a","A","e","E","i","I","o","O","u","U"] :
+#       collector.append(i)
+
+# print(collector)
+# ---------------------------
+# sentence = input("enter a sentence to remove vowels : ")
+# vowels = 'aeiouAEIOU'
+# result_sentence = ''
+
+# for char in sentence :
+#     if char not in vowels :
+#         result_sentence += char
+
+# print(result_sentence)
+
+
+
+# 28 ---------------------------------------------------------------------#
+
+# sentence = input("enter a sentence : ")
+# print(sentence.lower().title())
+
