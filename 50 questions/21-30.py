@@ -135,3 +135,30 @@
 # sentence = input("enter a sentence : ")
 # print(sentence.lower().title())
 
+
+
+# 29 ---------------------------------------------------------------------#
+
+# sentence = input("enter a senctence : ")
+# def replace_space_with_underscore(str) :
+#     words = str.split(" ")
+#     return "_".join(words)
+
+# print(replace_space_with_underscore(sentence))
+
+
+
+# 30 ---------------------------------------------------------------------#
+
+# sentence = input("Enter a sentence : ")
+
+# freq = {}
+
+# for i in sentence :
+#     if i in freq :
+#         freq[i] += 1
+#     else :
+#         freq[i] = 1
+
+# most_freq_letter =  max(freq, key=freq.get)
+# print(f"most frequent letter is : {most_freq_letter}" )

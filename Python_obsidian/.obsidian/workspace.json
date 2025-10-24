@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Good Questions to Practice.md",
+                "file": "basics/datatypes/set().md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Good Questions to Practice"
+              "title": "set()"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Good Questions to Practice.md",
+                "file": "basics/datatypes/set().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Good Questions to Practice"
+              "title": "Backlinks for set()"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Good Questions to Practice.md",
+                "file": "basics/datatypes/set().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Good Questions to Practice"
+              "title": "Outgoing links from set()"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Good Questions to Practice.md",
+                "file": "basics/datatypes/set().md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Good Questions to Practice"
+              "title": "Outline of set()"
             }
           }
         ]
@@ -172,6 +172,12 @@
   },
   "active": "af94b415fb1cf024",
   "lastOpenFiles": [
+    "basics/datatypes/fstring.md",
+    "basics/datatypes/dict().md",
+    "basics/datatypes/args and kwargs.md",
+    "basics/datatypes/list and tuples.md",
+    "Basics of Python.md",
+    "Good Questions to Practice.md",
     "Loops.md",
     "methods.md"
   ]
