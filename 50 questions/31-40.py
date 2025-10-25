@@ -38,3 +38,28 @@
 
 # list_3 = list(sorted(set(list_1+list_2)))
 # print(list_3)
+
+
+
+# 33 ---------------------------------------------------------------------#
+
+# list_1 = [1,2,4,5,6,4,0,7,9.5,11,8]
+# list_1.sort()
+# print(list_1)
+
+
+
+# 34 ---------------------------------------------------------------------#
+# from collections import Counter
+# list_1 = [123,23,4,53,2,4,2,1,456,74,2,1,1,123,8,9]
+
+# # count_dict = {}
+# # for i in list_1:
+# #     if i in count_dict:
+# #         count_dict[i] += 1
+# #     else:
+# #         count_dict[i]=1
+
+# # print(count_dict)
+
+# print(Counter(list_1))
