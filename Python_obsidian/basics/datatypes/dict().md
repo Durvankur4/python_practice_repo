@@ -39,3 +39,4 @@ for key, value in student.items():
 
 ```
 
+![[Pasted image 20251025210451.png]]
