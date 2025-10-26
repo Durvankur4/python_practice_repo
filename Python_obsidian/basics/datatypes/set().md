@@ -18,4 +18,4 @@ print(empty2)  # type dict()
 
 ```
 
-
+![[Pasted image 20251026221802.png]]
