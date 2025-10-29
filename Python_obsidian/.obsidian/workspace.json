@@ -73,13 +73,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basics/datatypes/list and tuples.md",
+                "file": "basics/datatypes/set().md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "list and tuples"
+              "title": "set()"
             }
           }
         ],
@@ -233,18 +233,18 @@
   },
   "active": "ea5996c0070b44ed",
   "lastOpenFiles": [
+    "Concepts/Comprehensions.md",
     "basics/datatypes/dict().md",
+    "basics/datatypes/list and tuples.md",
     "basics/datatypes/set().md",
     "pngs/Pasted image 20251026221802.png",
     "Concepts/Sorted() and .sort().md",
     "basics/variables.md",
-    "Concepts/Comprehensions.md",
     "pngs/Pasted image 20251025222307.png",
     "Concepts",
     "pngs/Pasted image 20251025210451.png",
     "basics/List Comprehesnsion.md",
     "pngs/Pasted image 20251025204821.png",
-    "basics/datatypes/list and tuples.md",
     "basics/datatypes/fstring.md",
     "basics/datatypes/args and kwargs.md",
     "Basics of Python.md",

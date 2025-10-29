@@ -94,3 +94,67 @@
 # for i in var1:
 #     count += 1
 # print(count)
+
+
+
+# 38 ---------------------------------------------------------------------#
+
+# list1 = [x for x in range(2,12)]
+# list2 = [x**2 for x in range(2,12)]
+# dict1 = {}
+
+# for i in range(len(list1)):
+#     dict1[list1[i]] = list2[i]
+  
+# print(dict1)
+
+
+
+# 39 ---------------------------------------------------------------------#
+
+# list1 = [x for x in range(2,12)]
+# list2 = [x**2 for x in range(2,12)]
+# dict1 = {}
+
+# for i in range(len(list1)):
+#     dict1[list1[i]] = list2[i]
+
+# print(dict1)
+# dict2 ={}
+# for key, value in dict1.items() :
+#     temp = key
+#     key = value
+#     value = temp
+#     dict2[key] = value
+
+# print(dict2)
+
+# ---------
+
+# list1 = [x for x in range(2, 12)]
+# list2 = [x**2 for x in range(2, 12)]
+
+# dict1 = {list1[i] : i for i in range(len(list1))}
+# dict2 = {values : keys for keys, values in dict1.items()}
+
+# print(dict1)
+# print(dict2)
+
+
+
+# 40 ---------------------------------------------------------------------#
+
+# dict1 = {i : i*i for i in range(11)}
+# print(dict1)
+
+# list_of_values = [x for x in dict1.values()]
+# print(max(list_of_values))
+
+# for key, values in dict1.items():
+#     if values == max(list_of_values):
+#         print(key)
+
+dict1 = {i : i*i for i in range(12)}
+
+max_key = max(dict1,key=dict1.get)
+print(max_key)

@@ -3,6 +3,9 @@ Each key is unique.
 Values can be any data type.
 Dictionaries are unordered in Python
 
+also dict1[key] = value
+is used to define dict value at a index
+
 creating 
 ```
 # Using curly braces
