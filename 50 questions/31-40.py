@@ -154,7 +154,7 @@
 #     if values == max(list_of_values):
 #         print(key)
 
-dict1 = {i : i*i for i in range(12)}
+# dict1 = {i : i*i for i in range(12)}
 
-max_key = max(dict1,key=dict1.get)
-print(max_key)
+# max_key = max(dict1,key=dict1.get)
+# print(max_key)
