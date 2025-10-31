@@ -77,9 +77,18 @@
 
 # list1 =  [1,2,3,3,4,4,'a','b','c','d','d']
 # list2 = set(list1)
-# print(list2)
+# print(list2)  
+
+
 
 # 46 ---------------------------------------------------------------------#
+
+# dict1 = {'a' : 1, 'b' : 2, 'c' : 3, 'd' : 5, 'e' : 4}
+# flat1 = []
+# for i in dict1.values():
+#     flat1.append(i)
+# flat1.sort()
+# print(flat1)
 
 
 
