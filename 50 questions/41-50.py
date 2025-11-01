@@ -101,46 +101,35 @@
 
 # 48 ---------------------------------------------------------------------#
 
-file1 = open("file1.txt",'r')
-read_file1 = file1.read()
-words = read_file1.split()
-print(read_file1,words)
+# file1 = open("file1.txt",'r')
+# read_file1 = file1.read()
+# words = read_file1.split()
+
+# word_counts = {}
+
+# for word in words:
+#     word = word.lower()
+#     word_counts[word] = word_counts.get(word,0)+1 
+
+# print(word_counts)
 
 
 # 49 ---------------------------------------------------------------------#
+
+# num1 = int(input("enter a number : "))
+# num2 = int(input("enter a number : "))
+# ans = 0
+# try:
+#     ans = num1/num2
+#     print(ans)
+# except ValueError as e:
+#     print(e)
+# except ZeroDivisionError as e :
+#     print(e)
 
 
 
 # 50 ---------------------------------------------------------------------#
 
+# print([x**2 for x in range(1,21)])
 
-# 41:
-#     title: "Check if a number is an Armstrong number"
-#     description: "Take an integer input, find the sum of each digit raised to the power of the number of digits, and check if that sum equals the original number."
-#   42:
-#     title: "Check if a number is a perfect number"
-#     description: "Find all divisors of a given number (excluding the number itself), add them up, and check if the total equals the number."
-#   43:
-#     title: "Merge two dictionaries"
-#     description: "Combine two separate dictionaries into one, so that all their key–value pairs are stored together in a single dictionary."
-#   44:
-#     title: "Flatten a nested list"
-#     description: "Convert a list that contains other lists (like [[1,2],[3,4]]) into one single list containing all the individual numbers ([1,2,3,4])."
-#   45:
-#     title: "Find unique elements in a list"
-#     description: "From a list that may have duplicate values, create a new list that contains each distinct element only once."
-#   46:
-#     title: "Sort a dictionary by value"
-#     description: "Rearrange the items of a dictionary in order (ascending or descending) based on their values, not their keys."
-#   47:
-#     title: "Read a file and count the number of lines"
-#     description: "Open a text file, read all its contents, and count how many separate lines (rows) it contains."
-#   48:
-#     title: "Read a file and count the frequency of each word"
-#     description: "Read a text file, split the text into individual words, and count how many times each unique word appears."
-#   49:
-#     title: "Exception handling: divide two numbers safely"
-#     description: "Write a program that asks the user for two numbers, divides them, and properly handles errors like dividing by zero or entering non-numeric input."
-#   50:
-#     title: "Use list comprehension to create a list of squares from 1 to 20"
-#     description: "Use a one-line list comprehension to generate a list where each element is the square of numbers from 1 to 20."
