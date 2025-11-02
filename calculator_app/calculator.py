@@ -62,32 +62,32 @@ def button_Clicked(value):
             num = float(current)/100
             label.config(text = remove_decimal(num))
 
-    elif value in right_symbols :
+        
+    if value in right_symbols :
+
         if value == '=':
             if A is not None and operator is not None :
-                B= label['text']
-                numA = float(A)
-                numB = float(B)
+                B = current 
 
-                if operator == "+":
-                    label["text"] = remove_decimal(numA + numB)
-                elif operator == "-":
-                    label["text"] = remove_decimal(numA - numB)
-                elif operator == "*":
-                    label["text"] = remove_decimal(numA * numB)
-                elif operator == "÷":
-                    label["text"] = remove_decimal(numA / numB)
-
+                if operator=="+":
+                    result = remove_decimal(float(A)+float(B))
+                elif operator=="-":
+                    result = remove_decimal(float(A)-float(B))
+                elif operator=="÷":
+                    result = remove_decimal(float(A)/float(B))
+                elif operator=="*":
+                    result = remove_decimal(float(A)*float(B))
+                label.config(text = result)
             clear_all()
 
-        elif value in '+-÷*':
+        if value in '÷*-+':
+
             if operator == None:
                 A = label["text"]      # store the first number ("5")
                 label["text"] = "0"    # reset screen for second number
                 B = "0"
-            
-            operator = value
-            
+
+            operator = value           
     
     else:
         if value == '.': #.
