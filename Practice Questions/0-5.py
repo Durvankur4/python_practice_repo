@@ -15,6 +15,8 @@
 
 # ---
 
+list_inp = list(input('enter a lsiit of numbers :'))
+
 def funtion(list1,target):
     result=[]
     for i in range(len(list1)):
@@ -24,7 +26,7 @@ def funtion(list1,target):
                 result.append(j)
     return result
 
-print(funtion([2,7,11,15],13))
+print(funtion(list_inp))
 
 
 
