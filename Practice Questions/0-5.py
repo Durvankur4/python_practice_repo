@@ -15,18 +15,18 @@
 
 # ---
 
-list_inp = list(input('enter a lsiit of numbers :'))
 
-def funtion(list1,target):
-    result=[]
-    for i in range(len(list1)):
-        for j in range(i+1,len(list1)):
-            if list1[i]+list1[j] == target :
-                result.append(i)
-                result.append(j)
-    return result
 
-print(funtion(list_inp))
+# def funtion(list1,target):
+#     result=[]
+#     for i in range(len(list1)):
+#         for j in range(i+1,len(list1)):
+#             if list1[i]+list1[j] == target :
+#                 result.append(char)
+#                 result.append(j)
+#     return result
+
+# print(funtion([2,7,11,15],13))
 
 
 
@@ -48,11 +48,14 @@ print(funtion(list_inp))
 
 # ---
 
-
-
-
-
-
+# user_inp = 121
+# def check_palindrome(inp):
+#     inpS = str(inp)
+#     if inpS == inpS[::-1]:
+#         return True
+#     else:
+#         return False    
+# print(check_palindrome(user_inp))
 
 
 
@@ -76,14 +79,38 @@ print(funtion(list_inp))
 # ```
 
 # ---
+# def paranthesis_check(string):
 
+#         stack = []
+#         for char in string :
+#             if char in '({[':
+#                 stack.append(char)
+            
+            
+#             elif char in '}])':
+#                 if not stack :
+#                      print('not in order')
+#                 elif stack[-1]== '(' and char == ')':
+#                     stack.pop()
+#                 elif stack[-1]== '[' and char == ']':
+#                     stack.pop()
+#                 elif stack[-1]== '{' and char == '}':
+#                     stack.pop()
+#                 else :
+#                     print('this does not follow order')
+#                     return
+        
+#             else:
+#                  print('inorder')
 
-
-
-
-
-
-
+#         if stack != 0 :
+#              print('more opening brackets')
+#         else :
+#              print('done')
+             
+# paranthesis_check('{}[](){')
+# paranthesis_check('{}[](})')
+# paranthesis_check('{}[]()')
 
 
 
@@ -102,8 +129,21 @@ print(funtion(list_inp))
 # ```
 
 
+# nums = [1,2,3,4,4,5,6,7,7,7,8,9]
 
+# def rem_duplicates(arr):
+#     if not arr:
+#         return False
+    
+#     i = 0
+#     for j in range(len(arr)):
+#         if arr[j] != arr[i]:
+#             i+=1
+#             arr[i]=arr[j]
 
+#     return i
+
+# print(rem_duplicates(nums))
 
 
 
@@ -124,9 +164,13 @@ print(funtion(list_inp))
 
 # ```
 # Input: digits = [1,2,3]  
-# Output: [1,2,4]
+# Output: [2,3,4]
 # ```
 
 # ---
 
 # Would you like me to include the **Python solutions** for these 5 next?
+
+# nums = [1,2,3,4,4,5,6,7,7,7,8,9]
+# lsitaddOne = list(map(lambda x : x+1 ,nums))
+# print(lsitaddOne)

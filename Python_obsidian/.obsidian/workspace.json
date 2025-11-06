@@ -8,97 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "af94b415fb1cf024",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "basics/datatypes/list and tuples.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "list and tuples"
-            }
-          },
-          {
-            "id": "b711c389634df9b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "basics/datatypes/dict().md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "dict()"
-            }
-          },
-          {
-            "id": "efc5e3ef856444cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts/Sorted() and .sort().md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorted() and .sort()"
-            }
-          },
-          {
-            "id": "2de075aa5bb6f695",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "basics/variables.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "variables"
-            }
-          },
-          {
-            "id": "ea5996c0070b44ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "funcitons/Lambda.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Lambda"
-            }
-          },
-          {
             "id": "ccbf0d313b97ab40",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DBMS CHEAT SHEET.md",
+                "file": "funcitons/map().md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "DBMS CHEAT SHEET"
+              "title": "map()"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "map",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -151,7 +75,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -248,13 +173,15 @@
   },
   "active": "ccbf0d313b97ab40",
   "lastOpenFiles": [
-    "funcitons/Lambda.md",
+    "Functions.md",
     "DBMS CHEAT SHEET.md",
+    "Concepts/Comprehensions.md",
+    "operations/Chained Conditionals.md",
+    "funcitons/Lambda.md",
     "Untitled",
     "basics/datatypes/set().md",
     "funcitons/sum().md",
     "File Handeling.md",
-    "Concepts/Comprehensions.md",
     "basics/datatypes/dict().md",
     "basics/datatypes/list and tuples.md",
     "pngs/Pasted image 20251026221802.png",

@@ -1,7 +1,19 @@
 not → evaluated first
 and → evaluated second
 or → evaluated last
+
 ![[Pasted image 20251003191454.png]]
+
+if not condition:
+code executes when condition is False
+
+```
+x = 5
+if not x > 10:
+    print("x is not greater than 10")
+
+```
+
 
 if elif else :
 
