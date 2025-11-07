@@ -174,3 +174,14 @@
 # nums = [1,2,3,4,4,5,6,7,7,7,8,9]
 # lsitaddOne = list(map(lambda x : x+1 ,nums))
 # print(lsitaddOne)
+
+
+# bonus
+# count vowels in a string
+
+str = input("enter a string")
+count = 0
+for i in str.lower() :
+    if i in 'aeiou':
+        count +=1
+print(count)
