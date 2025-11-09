@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "funcitons/map().md",
+                "file": "funcitons/enumerate().md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "map()"
+              "title": "enumerate()"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "map",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -173,6 +173,7 @@
   },
   "active": "ccbf0d313b97ab40",
   "lastOpenFiles": [
+    "funcitons/map().md",
     "Functions.md",
     "DBMS CHEAT SHEET.md",
     "Concepts/Comprehensions.md",

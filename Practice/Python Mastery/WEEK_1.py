@@ -58,7 +58,8 @@
 
 
 # Problem 3 (Hard) — Sliding window max (control-flow + algorithm)
-# Given a list of integers and a window size k, return a list of maximums for each contiguous window of length k. Example: [1,3,-1,-3,5,3,6,7], k=3 → [3,3,5,5,6,7].
+# Given a list of integers and a window size k, return a list of maximums for each contiguous window of length k.
+# Example: [1,3,-1,-3,5,3,6,7], k=3 → [3,3,5,5,6,7].
 # Step-by-step approach
 # We want O(n). Use a deque storing indices of elements in decreasing value order:
 # Iterate indices i from 0 to n-1.
@@ -66,3 +67,6 @@
 # Pop right elements while current element >= element at deque[-1] to keep deque decreasing.
 # Append current index.
 # Starting at i >= k-1, record nums[deque[0]] as window max.
+
+def find_max(list : list[str], k : int) -> list[int] :
+    x
