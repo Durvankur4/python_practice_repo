@@ -1,22 +1,68 @@
+# Problem 1 (Easy) — FizzBuzz variant
 # Write a function fizz_buzz(n) that returns a list of strings for numbers 1..n:
 # multiples of 3 → "Fizz"
 # multiples of 5 → "Buzz"
 # multiples of both → "FizzBuzz"
 # otherwise → string of the number
 
-def fizz_buzz(n):
-    if n <=0 :
-        return []
-    out = []
-    for i in range(1,n+1):
-        if i % 15 == 0:
-            out.append("FizzBuzz")
-        elif i % 5 == 0 :
-            out.append("Buzz")
-        elif i % 3 == 0 :
-            out.append("Fizz")
-        else :
-            out.append(str(i))
-    return out
+# Solution (step-by-step)
+# Validate n is positive integer (simple guard).
+# Iterate for i in range(1, n+1).
+# Use condition order: check multiples of both first (or use concatenation).
+# Append result to list and return.
 
-print(fizz_buzz(20))
+# def fizz_buzz(n):
+#     if n <=0 :
+#         return []
+#     out = []
+#     for i in range(1,n+1):
+#         if i % 15 == 0:
+#             out.append("FizzBuzz")
+#         elif i % 5 == 0 :
+#             out.append("Buzz")
+#         elif i % 3 == 0 :
+#             out.append("Fizz")
+#         else :
+#             out.append(str(i))
+#     return out
+
+# print(fizz_buzz(20))
+
+
+
+# Problem 2 (Medium) — Count words with filter
+# Given a list of strings, return a dict mapping words → count, but:
+# normalize to lowercase
+# skip empty strings and words shorter than 3 chars
+# treat punctuation .,!?;: as separators (strip them)
+# Example: ["Hi!", "hello", "Hello", "ok", "well-done."] → {'hello': 2, 'well-done':1}
+
+# def count_string(words : list[str]) -> dict[str,int]:
+#     PUNCT = ".,!?;:"
+#     count_dict = {}
+#     for i in words :
+#         if not i:
+#             continue
+#         if len(i) <= 3:
+#             continue
+#         i = i.strip(PUNCT).lower()
+    
+#         if i in count_dict:
+#             count_dict[i]+=1 
+#         else:
+#             count_dict[i] =1
+        
+#     return count_dict
+
+# print(count_string(["HEllo","hi","hello","WTF.",'wtf?']))
+
+
+# Problem 3 (Hard) — Sliding window max (control-flow + algorithm)
+# Given a list of integers and a window size k, return a list of maximums for each contiguous window of length k. Example: [1,3,-1,-3,5,3,6,7], k=3 → [3,3,5,5,6,7].
+# Step-by-step approach
+# We want O(n). Use a deque storing indices of elements in decreasing value order:
+# Iterate indices i from 0 to n-1.
+# Pop left elements if they are out of window (i - deque[0] >= k).
+# Pop right elements while current element >= element at deque[-1] to keep deque decreasing.
+# Append current index.
+# Starting at i >= k-1, record nums[deque[0]] as window max.
