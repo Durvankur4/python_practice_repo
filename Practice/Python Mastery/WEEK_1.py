@@ -68,15 +68,52 @@
 # Append current index.
 # Starting at i >= k-1, record nums[deque[0]] as window max.
 
-# def find_max(list : list[str], k : int) -> list[int] :
-#     pass
+def find_max(window : list[int]) -> int:
+    max_num = max(list)
+    return max_num
 
+def find_max_window(list : list[int], k : int) -> list[int] :
+    result = []
+    window_stack = list[:k]
+    result.append(window_stack)
+    for i in range(k,len(list)):
+        print(i)
+        window_stack = list[i] - list[i-k]
+        
+        max = find_max(window_stack)
+        result.append(max)
+
+    print(result)
+    return
+
+find_max_window([1,3,-1,-3,5,3,6,7])
 
 
 # Example
 # Find the maximum sum of any 3 consecutive numbers in a list.
 # nums = [2, 1, 5, 1, 3, 2]
 # k = 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # def some_function(nums : list[int], k : int)-> int :
 #     window_sum = sum(nums[:k])
