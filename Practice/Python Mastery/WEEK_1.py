@@ -68,57 +68,41 @@
 # Append current index.
 # Starting at i >= k-1, record nums[deque[0]] as window max.
 
-def find_max(window : list[int]) -> int:
-    max_num = max(window)
-    return max_num
+# def find_max(window : list[int]) -> int:
+#     max_num = max(window)
+#     return max_num
 
-#code works but is not optimal
-def find_max_window(list : list[int], k : int) -> list[int] :
+# #code works but is not optimal
+# def find_max_window(list : list[int], k : int) -> list[int] :
 
-    # list which is to be passed
-    # k is the window sizze
+#     # list which is to be passed
+#     # k is the window sizze
 
-    result = []
-    window_stack = list[:k]
-    result.append(find_max(window_stack))
+#     result = []
+#     window_stack = list[:k]
+#     result.append(find_max(window_stack))
 
-    for i in range(k,len(list)):
-        window_stack.append(list[i])
-        window_stack.remove(list[i-k])
-        max = find_max(window_stack)
-        result.append(max)
+#     for i in range(k,len(list)):
+#         window_stack.append(list[i])
+#         window_stack.remove(list[i-k])
+#         max = find_max(window_stack)
+#         result.append(max)
 
-    print(result)
-    return
+#     print(result)
+#     return
 
 
-find_max_window([1,3,-1,-3,5,3,6,7],3)
+# find_max_window([1,3,-1,-3,5,3,6,7],3)
+
+
+
+
 
 
 # Example
 # Find the maximum sum of any 3 consecutive numbers in a list.
 # nums = [2, 1, 5, 1, 3, 2]
 # k = 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # def some_function(nums : list[int], k : int)-> int :
@@ -132,3 +116,86 @@ find_max_window([1,3,-1,-3,5,3,6,7],3)
 #     return max_sum
 
 # print(some_function([2, 1, 5, 1, 3, 2],3))
+
+
+# Problem 3 O(n) using deque :
+
+##problem solved but REDO once again
+
+# from collections import deque
+
+# def find_max_window(arr : list[int], k : int) -> list[int]:
+#     if not isinstance(arr, list): #if arr is a list
+#         print("enter a list!")
+#     if not isinstance(k,int): # if k is a int
+#         print("Enter a int window size!")
+
+#     len_arr = len(arr)
+
+#     if k <=0 or len_arr<=0 or k>len_arr: # null error check
+#         print("enter some data!")
+
+#     dq = deque();
+#     result : list[int] = []
+
+#     for i,val in enumerate(arr):
+#         while dq and dq[0] <= i-k:
+#             dq.popleft()
+        
+#         while dq and arr[dq[-1]] <= val:
+#             dq.pop()
+
+#         dq.append(i)
+#         if i >= k-1 :
+#             result.append(arr[dq[0]])
+
+#     return result
+
+# print(find_max_window([1,3,-1,-3,5,3,6,7],3))
+
+
+# Clean Code Challenge (refactor)
+# Refactor the messy function below to be readable, efficient, and PEP-8 compliant. Provide the refactored code and a short note on what you changed.
+
+# def do(stuff):
+#   a = {}
+#   for i in range(0,len(stuff)):
+#     item = stuff[i]
+#     if item != None:
+#       name = item.get('n')
+#       if name:
+#         if name in a:
+#           a[name] = a[name] + 1
+#         else:
+#           a[name] = 1
+#   return a
+
+
+# items = [
+#     {"n": "alice"},
+#     {"n": "bob"},
+#     {"n": "alice"},    # repeat
+#     {"x": 123},        # missing 'n'
+#     {"n": ""},         # empty name
+#     None,              # ignored
+#     {},                # empty mapping
+#     {"n": "charlie"},
+#     {"n": None},       # explicitly None
+#     {"n": "bob"},      # repeat
+# ]
+
+# def count_names(dict : dict[str,str]):
+#     a = {}
+    
+#     for i in range(0,len(dict)):
+#         item = dict[i]
+#         if item != None :
+#             name = item.get('n')
+#             if name in a :
+#                 a[name] += 1
+#             else :
+#                 a[name] = 1
+    
+#     return a
+
+
