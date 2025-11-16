@@ -24,17 +24,17 @@
 # Create a URL slug from text: lowercase, replace whitespace with -, remove punctuation, collapse multiple -, 
 # trim leading/trailing hyphens.
 # import re
-import string
+# import string
 
-PUNCT = string.punctuation
+# PUNCT = string.punctuation
 
-def url_slug(url_text : str)-> str:
-    url = []
-    table = str.maketrans("","",string.punctuation)
-    url = url_text.translate(table)
-    return "-".join(url.lower().split())
+# def url_slug(url_text : str)-> str:
+#     url = []
+#     table = str.maketrans("","",string.punctuation)
+#     url = url_text.translate(table)
+#     return "-".join(url.lower().split())
 
-print(url_slug("stjisg ao!jd  Sk ??? aa"));
+# print(url_slug("stjisg ao!jd  Sk ??? aa"));
 
 # Problem 3 (Hard) — simple template replacer (mini templating)
 # Implement render_template(template: str, context: dict) -> str that replaces {{key}} tokens with # str(context[key]). 
@@ -42,3 +42,4 @@ print(url_slug("stjisg ao!jd  Sk ??? aa"));
 # Replace multiple tokens
 # Leave tokens unchanged if key missing (or provide optional default argument)
 # Avoid catastrophic repeated replacements (don't call .replace repeatedly over the whole string if unnecessary)
+ 
