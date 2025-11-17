@@ -36,6 +36,51 @@
 
 # print(url_slug("stjisg ao!jd  Sk ??? aa"));
 
+
+# Simplified Problem — Replace {{key}} with UPPERCASE Key
+# Write a function:
+# def shout_keys(template: str) -> str:
+# It should find all occurrences of {{something}} and replace them with the UPPERCASE version of the text inside the braces.
+# Example:
+# "Hello {{name}}, welcome to {{place}}!"
+# → "Hello NAME, welcome to PLACE!"
+# Rules (much simpler than the real Problem 3):
+# Don’t worry about missing keys or lookup tables.
+# Don’t evaluate or fetch anything — just uppercase the inner text.
+# Token format: {{ key }} or {{key}} or even {{ key }} → all valid.
+# Key must be alphabetic only (letters a-z).
+
+def shout_keys(template: str) -> str:
+    out = []
+    i = 0
+    n = len(template)
+
+    while i < n:
+        # Detect {{
+        if i+1 < n and template[i] == "{" and template[i+1] == "{" :
+            i += 2
+            start = i
+            inner = []
+
+            while i+1 < n and not (template[i] == "}" and template[i+1] == "}"):
+                i+= 1
+            
+            inner = template[start:i].strip()
+            out.append(inner.upper())
+            i+=2
+            
+            
+        else:
+            out.append(template[i])
+            i+=1
+
+
+
+    return "".join(out)
+
+
+
+print(shout_keys("apple {{apple}} apple {{banaan}}"))
 # Problem 3 (Hard) — simple template replacer (mini templating)
 # Implement render_template(template: str, context: dict) -> str that replaces {{key}} tokens with # str(context[key]). 
 # Should:
