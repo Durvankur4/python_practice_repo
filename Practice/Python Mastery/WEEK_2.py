@@ -86,31 +86,31 @@
 # Leave tokens unchanged if key missing (or provide optional default argument)
 # Avoid catastrophic repeated replacements (don't call .replace repeatedly over the whole string if unnecessary)
  
-def render_template(template: str, context: dict) -> str :  
-    i=0 
-    out =[]
-    n= len(template)
-    while i < n:
+# def render_template(template: str, context: dict) -> str :  
+#     i=0 
+#     out =[]
+#     n= len(template)
+#     while i < n:
         
-        if i+1<n and template[i]=="{" and template[i+1]== "{" :
-            i+=2
-            start = i
+#         if i+1<n and template[i]=="{" and template[i+1]== "{" :
+#             i+=2
+#             start = i
             
             
-            while i+1<n and not( template[i]=="}" and template[i+1]== "}") :
-                i+=1
+#             while i+1<n and not( template[i]=="}" and template[i+1]== "}") :
+#                 i+=1
             
-            key = template[start:i]
-            out.append(context.get(key))
-            i+=2
+#             key = template[start:i]
+#             out.append(context.get(key))
+#             i+=2
 
-        else:
-            out.append(template[int(i)])
-            i+=1
+#         else:
+#             out.append(template[i])
+#             i+=1
 
-    print(context,out)
-    return "".join(out)
+#     print(context,out)
+#     return "".join(out)
 
 
 
-print(render_template("apple : {{1}} , banana : {{2}} , 50Rs : {{50Rs}}",{"1":"50Rs","2":"100Rs","50Rs" : "Cucumber"}))
+# print(render_template("apple : {{1}} , banana : {{2}} , 50Rs : {{50Rs}}",{"1":"50Rs","2":"100Rs","50Rs" : "Cucumber"}))
