@@ -50,37 +50,35 @@
 # Token format: {{ key }} or {{key}} or even {{ key }} → all valid.
 # Key must be alphabetic only (letters a-z).
 
-def shout_keys(template: str) -> str:
-    out = []
-    i = 0
-    n = len(template)
+# def shout_keys(template: str) -> str:
+#     out = []
+#     i = 0
+#     n = len(template)
 
-    while i < n:
-        # Detect {{
-        if i+1 < n and template[i] == "{" and template[i+1] == "{" :
-            i += 2
-            start = i
-            inner = []
+#     while i < n:
+#         # Detect {{
+#         if i+1 < n and template[i] == "{" and template[i+1] == "{" :
+#             i += 2
+#             start = i
+#             inner = []
 
-            while i+1 < n and not (template[i] == "}" and template[i+1] == "}"):
-                i+= 1
+#             while i+1 < n and not (template[i] == "}" and template[i+1] == "}"):
+#                 i+= 1
             
-            inner = template[start:i].strip()
-            out.append(inner.upper())
-            i+=2
+#             inner = template[start:i].strip()
+#             out.append(inner.upper())
+#             i+=2
             
             
-        else:
-            out.append(template[i])
-            i+=1
+#         else:
+#             out.append(template[i])
+#             i+=1
+
+#     return "".join(out)
+# print(shout_keys("apple {{apple}} apple {{banaan}}"))
 
 
 
-    return "".join(out)
-
-
-
-print(shout_keys("apple {{apple}} apple {{banaan}}"))
 # Problem 3 (Hard) — simple template replacer (mini templating)
 # Implement render_template(template: str, context: dict) -> str that replaces {{key}} tokens with # str(context[key]). 
 # Should:
@@ -88,3 +86,31 @@ print(shout_keys("apple {{apple}} apple {{banaan}}"))
 # Leave tokens unchanged if key missing (or provide optional default argument)
 # Avoid catastrophic repeated replacements (don't call .replace repeatedly over the whole string if unnecessary)
  
+def render_template(template: str, context: dict) -> str :  
+    i=0 
+    out =[]
+    n= len(template)
+    while i < n:
+        
+        if i+1<n and template[i]=="{" and template[i+1]== "{" :
+            i+=2
+            start = i
+            
+            
+            while i+1<n and not( template[i]=="}" and template[i+1]== "}") :
+                i+=1
+            
+            key = template[start:i]
+            out.append(context.get(key))
+            i+=2
+
+        else:
+            out.append(template[int(i)])
+            i+=1
+
+    print(context,out)
+    return "".join(out)
+
+
+
+print(render_template("apple : {{1}} , banana : {{2}} , 50Rs : {{50Rs}}",{"1":"50Rs","2":"100Rs","50Rs" : "Cucumber"}))
