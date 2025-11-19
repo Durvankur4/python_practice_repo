@@ -7,17 +7,17 @@
 # Membership test O(1) intuition -->
 
 
-def dedupe(items : list) -> list :
-  seen = set()
-  out = []
-  for item in items:
-    if item in seen :
-      continue
-    seen.add(item)
-    out.append(item)
-  return out
+# def dedupe(items : list) -> list :
+#   seen = set()
+#   out = []
+#   for item in items:
+#     if item in seen :
+#       continue
+#     seen.add(item)
+#     out.append(item)
+#   return out
   
-print(dedupe([1, 2, 1, 3, 2, 4, 5]))
+# print(dedupe([1, 2, 1, 3, 2, 4, 5]))
 
 
 

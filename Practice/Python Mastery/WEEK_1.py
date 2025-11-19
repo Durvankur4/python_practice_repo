@@ -104,7 +104,6 @@
 # nums = [2, 1, 5, 1, 3, 2]
 # k = 3
 
-
 # def some_function(nums : list[int], k : int)-> int :
 #     window_sum = sum(nums[:k])
 #     max_sum = window_sum
@@ -119,8 +118,6 @@
 
 
 # Problem 3 O(n) using deque :
-
-##problem solved but REDO once again
 
 # from collections import deque
 
@@ -153,6 +150,34 @@
 
 # print(find_max_window([1,3,-1,-3,5,3,6,7],3))
 
+
+# # resolution
+# from collections import deque 
+# def sliding_window(array : list[int], k = int) -> list[int] :
+#     array_len = len(array)
+#     dq = deque()
+#     result : list[int] = []
+
+#     if isinstance(array,list):
+#         print("Enter a list of int")
+#     if isinstance(k , int):
+#         print("Enter int in second argument")
+#     if k<0 or array_len<0 or k>array_len: 
+#         print("Error in Values")
+
+#     for i,val in enumerate(array):
+
+#         while dq and dq[0] <= i-k:
+#             dq.popleft()
+
+#         while dq and array[dq[-1]]<= val :
+#             dq.pop()
+
+#         dq.append(i)
+#         if i >= k-1:
+#             result.append(array[dq[0]])
+#     return result
+# print(sliding_window([1,3,-1,-3,5,3,6,7],3))
 
 # Clean Code Challenge (refactor)
 # Refactor the messy function below to be readable, efficient, and PEP-8 compliant. Provide the refactored code and a short note on what you changed.
