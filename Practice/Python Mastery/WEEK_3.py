@@ -43,6 +43,35 @@
 # Iterating a list of dicts -->
 
 
+def merge_list_of_dicts(dict_list : list[dict]) -> dict :
+    
+    '''
+    this function takes the dict_list as a list of multiple dictionaries
+    and merges them into one single dictionary called merged_dict
+    '''
+
+    merged_dict = {}
+
+    for record in dict_list :
+        
+        uid = record["id"]
+
+        if uid not in merged_dict:
+            merged_dict[uid] = record.copy()
+        else:
+            merged_dict[uid].update(record)
+
+    
+    return merged_dict
+
+
+print(merge_list_of_dicts([
+    {"id": 10, "name": "Alice"},
+    {"id": 10, "score": 89},
+    {"id": 12, "name": "Bob"},
+    {"id": 12, "score": 95}
+]))
+
 
 # <!-- Problem 3 (Hard) — Top-k most frequent elements
 # Given a list of items, return the k most frequent ones in descending order of frequency.
