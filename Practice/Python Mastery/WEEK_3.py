@@ -43,34 +43,34 @@
 # Iterating a list of dicts -->
 
 
-def merge_list_of_dicts(dict_list : list[dict]) -> dict :
+# def merge_list_of_dicts(dict_list : list[dict]) -> dict :
     
-    '''
-    this function takes the dict_list as a list of multiple dictionaries
-    and merges them into one single dictionary called merged_dict
-    '''
+#     '''
+#     this function takes the dict_list as a list of multiple dictionaries
+#     and merges them into one single dictionary called merged_dict
+#     '''
 
-    merged_dict = {}
+#     merged_dict = {}
 
-    for record in dict_list :
+#     for record in dict_list :
         
-        uid = record["id"]
+#         uid = record["id"]
 
-        if uid not in merged_dict:
-            merged_dict[uid] = record.copy()
-        else:
-            merged_dict[uid].update(record)
+#         if uid not in merged_dict:
+#             merged_dict[uid] = record.copy()
+#         else:
+#             merged_dict[uid].update(record)
 
     
-    return merged_dict
+#     return merged_dict
 
 
-print(merge_list_of_dicts([
-    {"id": 10, "name": "Alice"},
-    {"id": 10, "score": 89},
-    {"id": 12, "name": "Bob"},
-    {"id": 12, "score": 95}
-]))
+# print(merge_list_of_dicts([
+#     {"id": 10, "name": "Alice"},
+#     {"id": 10, "score": 89},
+#     {"id": 12, "name": "Bob"},
+#     {"id": 12, "score": 95}
+# ]))
 
 
 # <!-- Problem 3 (Hard) — Top-k most frequent elements
@@ -84,3 +84,20 @@ print(merge_list_of_dicts([
 # Time complexity (O(n) counting + O(n log k) heap operations)
 # Tuples used for ordering (e.g., (count, value))
 # This problem is foundational for interviews and high-performance Python -->
+
+def most_freq_elements(array : list[int] , k : int) -> list :
+
+    empty = {}
+    for item in array :
+        if item in empty:
+            empty[item] += 1
+        else :
+            empty[item] = 1
+    
+    sorted_elements = sorted(empty.items(),key = lambda item : item[1],reverse= True )
+        
+    print(sorted_elements)
+    top_k = [item for item,count in sorted_elements[:k]]
+    return  top_k
+
+print(most_freq_elements([-1,-1,-1,-1,1,1,1,2,2,3], k=2))
