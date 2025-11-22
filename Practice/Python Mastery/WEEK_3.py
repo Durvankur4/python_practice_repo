@@ -85,19 +85,19 @@
 # Tuples used for ordering (e.g., (count, value))
 # This problem is foundational for interviews and high-performance Python -->
 
-def most_freq_elements(array : list[int] , k : int) -> list :
+# def most_freq_elements(array : list[int] , k : int) -> list :
 
-    empty = {}
-    for item in array :
-        if item in empty:
-            empty[item] += 1
-        else :
-            empty[item] = 1
+#     empty = {}
+#     for item in array :
+#         if item in empty:
+#             empty[item] += 1
+#         else :
+#             empty[item] = 1
     
-    sorted_elements = sorted(empty.items(),key = lambda item : item[1],reverse= True )
+#     sorted_elements = sorted(empty.items(),key = lambda item : item[1],reverse= True )
         
-    print(sorted_elements)
-    top_k = [item for item,count in sorted_elements[:k]]
-    return  top_k
+#     print(sorted_elements)
+#     top_k = [item for item,count in sorted_elements[:k]]
+#     return  top_k
 
-print(most_freq_elements([-1,-1,-1,-1,1,1,1,2,2,3], k=2))
+# print(most_freq_elements([-1,-1,-1,-1,1,1,1,2,2,3], k=2))
