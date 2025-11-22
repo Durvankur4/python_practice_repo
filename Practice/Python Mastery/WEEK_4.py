@@ -48,3 +48,57 @@
 
 # assert c() == 11
 # assert c() == 12
+
+
+
+# Problem 3 (Hard) — Memoization decorator
+# Write a decorator @memoize that caches results of a function for each set of arguments.
+# Example:
+# @memoize
+# def fib(n):
+#     if n < 2:
+#         return n
+#     return fib(n-1) + fib(n-2)
+# Calling fib(35) should run instantly after caching.
+# Topics required (IMPORTANT)
+# You must know these:
+# Decorators (function wrapping another function)
+# Closures
+# functools.wraps to preserve metadata
+# Dicts as caches (cache[(args, frozenset(kwargs))] = result)
+# Tuples as hashable keys
+# If any of these feel unfamiliar, pause and review before solving.
+# 0 1 1 2 3 5 8 13 21 
+
+def memoization(func) :
+    cache = {}
+    def wrapper(*args,**kwargs):
+        key = (args, tuple(sorted(kwargs.items())))
+        if key in cache :
+            return cache[key]
+        else:
+            result = func(*args,**kwargs)
+            cache[key] = result
+        return result         
+
+    return wrapper
+
+
+
+
+@memoization
+def fibonacci(n):
+    if not isinstance(n, int):
+        raise TypeError("n must be an integer")
+
+    if n < 0:
+        raise ValueError("n must be non-negative")
+
+    if n < 2:
+        return n
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+
+print(fibonacci(55))
