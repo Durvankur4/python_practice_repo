@@ -70,35 +70,30 @@
 # If any of these feel unfamiliar, pause and review before solving.
 # 0 1 1 2 3 5 8 13 21 
 
-def memoization(func) :
-    cache = {}
-    def wrapper(*args,**kwargs):
-        key = (args, tuple(sorted(kwargs.items())))
-        if key in cache :
-            return cache[key]
-        else:
-            result = func(*args,**kwargs)
-            cache[key] = result
-        return result         
+# def memoization(func) :
+#     cache = {}
+#     def wrapper(*args,**kwargs):
+#         key = (args, tuple(sorted(kwargs.items())))
+#         if key in cache :
+#             return cache[key]
+#         else:
+#             result = func(*args,**kwargs)
+#             cache[key] = result
+#         return result         
 
-    return wrapper
+#     return wrapper
 
+# @memoization
+# def fibonacci(n):
+#     if not isinstance(n, int):
+#         raise TypeError("n must be an integer")
 
+#     if n < 0:
+#         raise ValueError("n must be non-negative")
 
+#     if n < 2:
+#         return n
 
-@memoization
-def fibonacci(n):
-    if not isinstance(n, int):
-        raise TypeError("n must be an integer")
+#     return fibonacci(n - 1) + fibonacci(n - 2)
 
-    if n < 0:
-        raise ValueError("n must be non-negative")
-
-    if n < 2:
-        return n
-
-    return fibonacci(n - 1) + fibonacci(n - 2)
-
-
-
-print(fibonacci(55))
+# print(fibonacci(55))
