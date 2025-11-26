@@ -102,3 +102,33 @@
 # print("\nFinal")
 # print(f"{Soldier.name}, {Soldier.hp} hp")
 # print(f"{Wizzard.name}, {Wizzard.hp} hp")
+
+
+# Problem 3 (Hard) — Custom Container with Dunder Methods
+# Design a class Vector that behaves like a mathematical vector:
+# Stores numbers internally
+# Supports:
+# len(v)
+# indexing: v[i]
+# iteration: for x in v
+# addition: v + v2
+# printing cleanly (__repr__)
+# Topics required (IMPORTANT)
+# __len__
+# __getitem__
+# __iter__
+# __repr__
+# Operator overloading (__add__)
+# Input validation
+
+class Vector:
+    def __init__(self,values):
+        self._vals = values 
+
+    def __len__(self):
+        return len(self._vals)
+
+v1 = Vector([2])
+
+print(v1.__len__())
+        
