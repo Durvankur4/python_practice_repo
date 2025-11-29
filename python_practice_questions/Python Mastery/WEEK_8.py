@@ -45,38 +45,29 @@
 # Time complexity
 # Eliminating repeated work
 # Optimized solution
-# import timeit 
+import timeit 
 
-# def pairs(nums, target):
-#     result = []
-#     for i in nums:
-#         for j in nums:
-#             if i + j == target:
-#                 result.append((i, j))
-#     return result
+def pairs(nums, target):
+    result = []
+    for i in nums:
+        for j in nums:
+            if i + j == target:
+                result.append((i, j))
+    return result
 
-# print(timeit.timeit(stmt="pairs([x for x in range(1000)],50)",setup="from __main__ import pairs",number=1))
-
-
-# def opt_pairs(nums,target):
-#     seen =set()
-#     out = []
-#     for n in nums:
-#         comp = target - n 
-#         if comp in seen:
-#             out.append((n,comp))
-#         seen.add(n)
-#     return out
-
-# print(timeit.timeit(stmt="opt_pairs([x for x in range(1000)],50)",number=100,setup="from __main__ import opt_pairs"))
+print(timeit.timeit(stmt="pairs([x for x in range(1000)],50)",setup="from __main__ import pairs",number=1))
 
 
-# Problem 3 (Hard) — Threaded Downloader
-# Write a function download_all(urls) that downloads all URLs using a thread pool and returns their text results in a list.
-# Topics Required (IMPORTANT)
-# concurrent.futures.ThreadPoolExecutor
-# requests or urllib
-# I/O-bound vs CPU-bound understanding
-# Futures (asynchronous task results)
-# Context manager pattern with executors
-###TO COMPEXT CURRENTYLT
+def opt_pairs(nums,target):
+    seen =set()
+    out = []
+    for n in nums:
+        comp = target - n 
+        if comp in seen:
+            out.append((n,comp))
+        seen.add(n)
+    return out
+
+print(timeit.timeit(stmt="opt_pairs([x for x in range(1000)],50)",number=100,setup="from __main__ import opt_pairs"))
+
+
