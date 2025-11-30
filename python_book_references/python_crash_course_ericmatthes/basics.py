@@ -96,12 +96,125 @@
 #     else :
 #          print("yoycan take that username")
 
-for i in range(1,10):
-    if i == 1:
-        print(f"{i}st")
-    elif i == 2 :
-        print(f"{i}nd")
-    elif i == 3:
-        print(f"{i}rd")
-    else:
-        print(f"{i}th")
+# for i in range(1,10):
+#     if i == 1:
+#         print(f"{i}st")
+#     elif i == 2 :
+#         print(f"{i}nd")
+#     elif i == 3:
+#         print(f"{i}rd")
+#     else:
+#         print(f"{i}th")
+
+# persons = [
+#     {
+#     "f_name": "Amanda",
+#     "l_name": "Greg",
+#     "city": "Huston"},
+#     {
+#     "f_name": "Rob",
+#     "l_name": "Thomas",
+#     "city": "Burgandy"}
+#     ]
+
+# for person in persons :
+#     print(f"\nhi {person["f_name"]} {person["l_name"]} from {person['city']}")
+
+# prompt = "\n Tell me something, and i will repeat it back to you : "
+# prompt += "\n Enter 'quit' to end the programme."
+# message = "" 
+# while message != "quit":
+#     message = input("enter the message :")
+
+#     if message != "quit":
+#         print(message)
+
+# prompt = "\n(enter quit to stop adding toppings)"
+# prompt += "Enter the toppings on your pizza :"
+
+
+# active = True
+# while active:
+#     print(prompt)
+#     toppings = input()
+#     if toppings == 'quit':
+#         active = False
+#     else :
+#         print(f"we'll add {toppings} to your pizza.")
+
+# unconfirmend_users = ["alice","brian","candice"]
+# confirmed_users = []
+
+# while unconfirmend_users :
+#     curr_user = unconfirmend_users.pop()
+#     print(f"Verifying Current user : {curr_user}")
+#     confirmed_users.append(curr_user)
+#     print("user verified")
+
+# print("\nthe following users have been verified :")
+# for user in confirmed_users:
+#     print(user.title())
+
+# pets = ["dogs","cats","rats","dogs","goldfish","cats","rats","dogs","cats","rats"]
+# print(pets)
+# while "cats" in pets:
+#     pets.remove('cats')
+# print(pets)
+
+
+# responses= {}
+# polling_active = True
+# while polling_active :
+#     name = input("enter the persons name : ")
+#     response = input("enter your favourite place : ")
+
+#     responses[name] = response
+    
+#     repeat = input("would you like to let other person respond : (yes/no)").lower()
+#     if repeat == "no":
+#         polling_active = False
+
+# print("Polling Reults ")
+# for name,response in responses.items():
+#     print(f"{name} : {response}")
+
+# sandwitch_orders = ["cheeze sandwitch","fruit sandwitch","shezwan sandwitch"]
+# finished_sandwitch = []
+
+# print(sandwitch_orders)
+# while sandwitch_orders:
+#     finished_sandwitch.append(sandwitch_orders.pop())
+    
+# print(finished_sandwitch)
+
+# list_msg = ["hi", "hello", "hui"]
+# sent_messages = []
+
+# def send_messages(messages):
+#     for item in messages:
+#         print(item)
+#         sent_messages.append(item)
+
+# print(list_msg)
+# send_messages(list_msg[:])   
+# print(sent_messages)
+# print(list_msg)
+
+# def make_pizza(size,*toppings):
+#     '''print the list of toppings that have been requested'''
+
+#     print(f"\nmaking a {size}-inch pizza with the following toppings:")
+#     for topping in toppings:
+#         print(f"- {topping}")
+
+# make_pizza(16,'peporoni')
+# make_pizza(18,'mushroom','green pepers','cheeze')
+
+def build_profile(first,last,**user_info):
+    '''build dictionary of users info'''
+    user_info['first-name'] = first
+    user_info['last-name'] =last
+    return user_info
+
+user_profile = build_profile('albert','einstein',location = 'priston')
+print(user_profile)

@@ -40,3 +40,33 @@
 
     to define a tuple with one element you need to add trailing comma
     my_tupple = (3,)
+
+
+### IF ELIF ELSE :-
+    if-elif-else this chain is powerful, but its only appropriate to use when you just need to
+    test one pass 
+    as soon as python finds one test that psses all other are skipped
+
+
+### Ditionaries :- 
+    in python dicts are a collection of key:value pair 
+
+    #accessing value in dict - 
+        get(key,option) method : 
+        if key exist and its value doesnt it returns None
+        if key doesnt exist it returns option
+
+
+### While loops :- 
+    make use of flags in while loops 
+
+
+###Functions :-
+    make use of keyword arguements by using the exact name of the patamerters in the func definition
+
+    #passing Arbitrary Number of Atguements -
+    def func_name(*keyword) in this the astrick tells python to make and empty tuple called keyword 
+    and pack wahtever value it revieves into the tuple.
+
+    #Arbitrary keyword arguements - 
+    **kwargs makes a dict of key:value pair to accept anynumber of keyword arguements
