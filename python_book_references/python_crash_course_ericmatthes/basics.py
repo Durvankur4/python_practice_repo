@@ -221,18 +221,61 @@
 
 # classes
 
-class Dog:
-    '''simple dog class'''
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+# class Dog:
+#     '''simple dog class'''
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
     
-    def sit(self):
-        print(f"{self.name} is now sitting")
-    def roll_over(self):
-        print(f"{self.name}is now rolling over.")
+#     #these are methods and they are no diff than a function 
+#     def sit(self):
+#         print(f"{self.name} is now sitting")
+#     def roll_over(self):
+#         print(f"{self.name}is now rolling over.")
     
-my_dog = Dog('willie',6) #here my_dog is an instance of a Class and Dog is a Class
-print(f'my dogs name is {my_dog.name} and his age is {my_dog.age}')
-my_dog.sit()
-my_dog.roll_over()
+# my_dog = Dog('willie',6) #here my_dog is an instance of a Class and Dog is a Class
+# print(f'my dogs name is {my_dog.name} and his age is {my_dog.age}')
+# my_dog.sit()
+# my_dog.roll_over()
+
+# class Restaurant:
+#     def __init__(self,restaurant_name,cusine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cusine_type = cusine_type
+
+#     def describe_restaurant(self):
+#         print(f"\nWelcome to {self.restaurant_name} restaurant.")
+#         print(f"We serve {self.cusine_type} Cusine.")
+#         return ""
+
+#     def open_restaurant(self):
+#         print("This Restauant is now open!")
+#         return ""
+
+# rest_1 = Restaurant("Panjabi Dhaaba","Indian")
+# rest_2 = Restaurant("Chiese Tok","Chinese")
+# rest_3 = Restaurant("Italian Diner","Italian")
+
+# list_rest = [rest_1,rest_2,rest_3]
+# for item in list_rest:
+#     print(item.describe_restaurant())
+#     print(item.open_restaurant())
+
+class User:
+    def __init__(self,first_name,last_name):
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+
+    def describe_user(self):
+        print(f"\nMy name is {self.first_name} {self.last_name}")
+     
+    def greet_user(self):
+        print(f"Hello {self.first_name}! nice to meet you!")
+
+user_1 = User("aman","bera")
+user_2 = User("sia","rahtod")
+user_3 = User("tia","kumar")
+list_user = [user_1,user_2,user_3]
+for user in list_user:
+    user.describe_user()
+    user.greet_user()
