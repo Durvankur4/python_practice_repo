@@ -210,11 +210,29 @@
 # make_pizza(16,'peporoni')
 # make_pizza(18,'mushroom','green pepers','cheeze')
 
-def build_profile(first,last,**user_info):
-    '''build dictionary of users info'''
-    user_info['first-name'] = first
-    user_info['last-name'] =last
-    return user_info
+# def build_profile(first,last,**user_info):
+#     '''build dictionary of users info'''
+#     user_info['first-name'] = first
+#     user_info['last-name'] =last
+#     return user_info
 
-user_profile = build_profile('albert','einstein',location = 'priston')
-print(user_profile)
+# user_profile = build_profile('albert','einstein',location = 'priston')
+# print(user_profile)
+
+# classes
+
+class Dog:
+    '''simple dog class'''
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    
+    def sit(self):
+        print(f"{self.name} is now sitting")
+    def roll_over(self):
+        print(f"{self.name}is now rolling over.")
+    
+my_dog = Dog('willie',6) #here my_dog is an instance of a Class and Dog is a Class
+print(f'my dogs name is {my_dog.name} and his age is {my_dog.age}')
+my_dog.sit()
+my_dog.roll_over()

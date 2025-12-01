@@ -70,3 +70,12 @@
 
     #Arbitrary keyword arguements - 
     **kwargs makes a dict of key:value pair to accept anynumber of keyword arguements
+
+###Class :- 
+    class is defining the genreal behaviour that a whole category of objects can have.
+
+    __init__(self) :- the self parameter is required in the method definition and it must come before any other param
+    method call will automatically passes the self arguement.
+
+    the two variables defined at each have the prefix self, these variables which are accessible through instance are
+    called attributes
