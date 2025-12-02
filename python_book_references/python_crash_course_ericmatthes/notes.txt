@@ -79,3 +79,7 @@
 
     the two variables defined at each have the prefix self, these variables which are accessible through instance are
     called attributes
+
+    #inheritance :- 
+    you can inherite class by using class ChildClass(ParentClass):
+    also the super().__init__(attributes of ParentClass) will add the attributes to the ChildClass 

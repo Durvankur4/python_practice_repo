@@ -261,21 +261,113 @@
 #     print(item.describe_restaurant())
 #     print(item.open_restaurant())
 
-class User:
-    def __init__(self,first_name,last_name):
-        self.first_name = first_name.title()
-        self.last_name = last_name.title()
+# class User:
+#     def __init__(self,first_name,last_name):
+#         self.first_name = first_name.title()
+#         self.last_name = last_name.title()
 
-    def describe_user(self):
-        print(f"\nMy name is {self.first_name} {self.last_name}")
+#     def describe_user(self):
+#         print(f"\nMy name is {self.first_name} {self.last_name}")
      
-    def greet_user(self):
-        print(f"Hello {self.first_name}! nice to meet you!")
+#     def greet_user(self):
+#         print(f"Hello {self.first_name}! nice to meet you!")
 
-user_1 = User("aman","bera")
-user_2 = User("sia","rahtod")
-user_3 = User("tia","kumar")
-list_user = [user_1,user_2,user_3]
-for user in list_user:
-    user.describe_user()
-    user.greet_user()
+# user_1 = User("aman","bera")
+# user_2 = User("sia","rahtod")
+# user_3 = User("tia","kumar")
+# list_user = [user_1,user_2,user_3]
+# for user in list_user:
+#     user.describe_user()
+#     user.greet_user()
+
+# class Restaurant:
+#     def __init__(self,restaurant_name,cusine_type,numbers_served = 0):
+#         self.restaurant_name = restaurant_name
+#         self.cusine_type = cusine_type
+#         self.numbers_served = numbers_served 
+
+#     def describe_restaurant(self):
+#         print(f"\nWelcome to {self.restaurant_name} restaurant.")
+#         print(f"We serve {self.cusine_type} Cusine.")
+        
+
+#     def open_restaurant(self):
+#         print("This Restauant is now open!")
+        
+#     def set_number_served(self,served_people):
+#         self.numbers_served += served_people
+#         print(f"this restaurant has served {self.numbers_served} people.")
+        
+
+
+# rest_1 = Restaurant("Panjabi Dhaaba","Indian",20)
+# # rest_2 = Restaurant("Chiese Tok","Chinese",50)
+# # rest_3 = Restaurant("Italian Diner","Italian",40)
+# rest_1.set_number_served(30)
+
+
+# class User:
+#     def __init__(self,first_name,last_name):
+#         self.first_name = first_name.title()
+#         self.last_name = last_name.title()
+#         self.login_attempt = 0
+
+#     def describe_user(self):
+#         print(f"\nMy name is {self.first_name} {self.last_name}")
+     
+#     def greet_user(self):
+#         print(f"Hello {self.first_name}! nice to meet you!")
+    
+#     def increment_login_attempt(self):
+#         self.login_attempt += 1 
+#         print(f"login attempted {self.login_attempt} times.")
+
+#     def reset_login_attempts(self):
+#         self.login_attempt = 0
+#         print(f"login attempted {self.login_attempt} times.")
+
+# user_1 = User("aman","bera")
+
+# user_1.increment_login_attempt()
+# user_1.increment_login_attempt()
+# user_1.increment_login_attempt()
+# user_1.increment_login_attempt()
+# user_1.reset_login_attempts()
+# user_1.increment_login_attempt()
+# from random import randint
+# class Die:
+#     def __init__(self,sides = 6):
+#         self.sides = sides
+#         print(f"this die is {self.sides} sided")
+
+#     def roll_die(self):
+#         value = randint(1,self.sides)
+#         print(f"the die rolled {value}")
+
+# # my_die = Die(20)
+# # for i in range(11):
+# #     my_die.roll_die()
+
+lottery_number = (1,3,'a','b')
+winning_number = (1,'a','b',3)
+from random import randint
+count = 0 
+
+while True:
+    count +=1
+    my_ticket = []
+
+    for i in range(len(winning_number)):
+        '''this will generate a random ticket form the lottey_number of size winnig_numebr'''
+
+        index_random = randint(0,len(lottery_number)-1)
+        my_ticket.append(lottery_number[index_random])
+
+    print(my_ticket)
+    if my_ticket == winning_number:
+        break
+    if count == 1_000_000 :
+        print("its taking too long")
+        break
+print(f"you won after {count} number of tries")
+
