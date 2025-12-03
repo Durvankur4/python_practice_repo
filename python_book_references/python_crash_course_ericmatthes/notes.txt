@@ -83,3 +83,20 @@
     #inheritance :- 
     you can inherite class by using class ChildClass(ParentClass):
     also the super().__init__(attributes of ParentClass) will add the attributes to the ChildClass 
+
+###Files and Excpetions :-
+    when you use the with in file object returned by open() is only avaliable inside the with block 
+    what contains it.
+
+    when you open file in 'w' mode Python rewites the flie entirely
+
+    you should never expose your tracback calls this might leave your files exposed to attackers 
+    instead use try and except block 
+    
+    #common errors in python :
+    SyntaxError: Incorrect code structure, such as missing colons or parentheses.
+    NameError: Using a variable or name that hasn't been defined.
+    TypeError: Performing operations on incompatible data types.
+    IndexError: Accessing a sequence index that is out of range.
+    KeyError: Referencing a dictionary key that doesn’t exist.
+    AttributeError: Accessing an attribute or method that doesn’t exist on an object.

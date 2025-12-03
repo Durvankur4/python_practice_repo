@@ -348,26 +348,56 @@
 # # for i in range(11):
 # #     my_die.roll_die()
 
-lottery_number = (1,3,'a','b')
-winning_number = (1,'a','b',3)
-from random import randint
-count = 0 
+# lottery_number = (1,3,'a','b')
+# winning_number = (1,'a','b',3)
+# from random import randint
+# count = 0 
+
+# while True:
+#     count +=1
+#     my_ticket = []
+
+#     for i in range(len(winning_number)):
+#         '''this will generate a random ticket form the lottey_number of size winnig_numebr'''
+
+#         index_random = randint(0,len(lottery_number)-1)
+#         my_ticket.append(lottery_number[index_random])
+
+#     print(my_ticket)
+#     if my_ticket == winning_number:
+#         break
+#     if count == 1_000_000 :
+#         print("its taking too long")
+#         break
+# print(f"you won after {count} number of tries")
+
+# with open("D:/03_Code\python\python_book_references\python_crash_course_ericmatthes\pi_digits.txt") as file_obj : #absolute pathing
+#     lines = file_obj.readlines()
+
+# pi_string = ''
+# for line in lines:
+#     pi_string += line.strip()
+# print(pi_string)
+# print(len(pi_string))
+
+# user_name = input("enter your name : ")
+# with open("guests.txt",'a') as file_obj:
+#     file_obj.writelines(user_name)
+
+print("give me two numebrs, and i'll divide them.")
+print("Enter 'q' to quit.")
 
 while True:
-    count +=1
-    my_ticket = []
-
-    for i in range(len(winning_number)):
-        '''this will generate a random ticket form the lottey_number of size winnig_numebr'''
-
-        index_random = randint(0,len(lottery_number)-1)
-        my_ticket.append(lottery_number[index_random])
-
-    print(my_ticket)
-    if my_ticket == winning_number:
+    first_number = input("\nFirst: number: ")
+    if first_number == 'q':
         break
-    if count == 1_000_000 :
-        print("its taking too long")
+    second_number = input("Enter Second number: ")
+    if first_number == 'q':
         break
-print(f"you won after {count} number of tries")
 
+    try:
+        answer = int(first_number)/int(second_number)
+    except ZeroDivisionError:
+        print("cant divide by zero hero")
+    else:
+        print(answer)
