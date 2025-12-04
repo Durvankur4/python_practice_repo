@@ -384,20 +384,74 @@
 # with open("guests.txt",'a') as file_obj:
 #     file_obj.writelines(user_name)
 
-print("give me two numebrs, and i'll divide them.")
-print("Enter 'q' to quit.")
+# print("give me two numebrs, and i'll divide them.")
+# print("Enter 'q' to quit.")
 
-while True:
-    first_number = input("\nFirst: number: ")
-    if first_number == 'q':
-        break
-    second_number = input("Enter Second number: ")
-    if first_number == 'q':
-        break
+# while True:
+#     first_number = input("\nFirst: number: ")
+#     if first_number == 'q':
+#         break
+#     second_number = input("Enter Second number: ")
+#     if first_number == 'q':
+#         break
 
-    try:
-        answer = int(first_number)/int(second_number)
-    except ZeroDivisionError:
-        print("cant divide by zero hero")
+#     try:
+#         answer = int(first_number)/int(second_number)
+#     except ZeroDivisionError:
+#         print("cant divide by zero hero")
+#     else:
+#         print(answer)
+
+# import json
+# numbers = [2,3,5,7,11,13]
+# file_name = 'numbers.json'
+# with open(file_name,'w') as f :
+#     json.dump(numbers,f)
+
+# import json 
+# file_name = 'numbers.json'
+# with open(file_name) as f:
+#     numbers = json.load(f)
+
+# print(numbers)
+
+import json 
+
+def greet_user():
+    '''Greet the user by name.'''
+    file_name = 'username.json'
+    try :
+        with open(file_name) as f :
+            username = json.load(f)
+    except FileNotFoundError :
+        username = input("waht is your name : ")
+        with open(file_name,'w') as f :
+            json.dump(username,f) 
+            print(f"we'll remember you when you come back {username}")
     else:
-        print(answer)
+        print(f"Welcome back {username}")
+        
+greet_user()
+
+
+def get_stored_username():
+    '''get sored username if available.'''
+    file_name = 'username.json'
+    try :
+        with open(file_name) as f :
+            username = json.load(f)
+    except FileNotFoundError :
+        return None
+    else:
+        return username
+    
+def greet_user():
+    username = get_stored_username()
+    if username:
+        print(f"welcome back {username}")
+    else:
+        file_name = 'username.json'
+        username = input("waht is your name : ")
+        with open(file_name,'w') as f :
+            json.dump(username,f) 
+            print(f"we'll remember you when you come back {username}")
