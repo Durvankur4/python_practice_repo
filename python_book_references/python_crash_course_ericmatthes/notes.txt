@@ -100,3 +100,6 @@
     IndexError: Accessing a sequence index that is out of range.
     KeyError: Referencing a dictionary key that doesn’t exist.
     AttributeError: Accessing an attribute or method that doesn’t exist on an object.
+
+    #Refactoring :
+    when you can improve the code by breaking it down it is called Refactoring

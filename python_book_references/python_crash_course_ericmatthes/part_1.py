@@ -415,43 +415,69 @@
 
 # print(numbers)
 
-import json 
+# import json 
 
-def greet_user():
-    '''Greet the user by name.'''
-    file_name = 'username.json'
-    try :
-        with open(file_name) as f :
-            username = json.load(f)
-    except FileNotFoundError :
-        username = input("waht is your name : ")
-        with open(file_name,'w') as f :
-            json.dump(username,f) 
-            print(f"we'll remember you when you come back {username}")
-    else:
-        print(f"Welcome back {username}")
+# def greet_user():
+#     '''Greet the user by name.'''
+#     file_name = 'username.json'
+#     try :
+#         with open(file_name) as f :
+#             username = json.load(f)
+#     except FileNotFoundError :
+#         username = input("waht is your name : ")
+#         with open(file_name,'w') as f :
+#             json.dump(username,f) 
+#             print(f"we'll remember you when you come back {username}")
+#     else:
+#         print(f"Welcome back {username}")
         
-greet_user()
+# greet_user()
 
-
-def get_stored_username():
-    '''get sored username if available.'''
-    file_name = 'username.json'
-    try :
-        with open(file_name) as f :
-            username = json.load(f)
-    except FileNotFoundError :
-        return None
-    else:
-        return username
+# ### below is the refactored code of the above so one code doesnt do everthing
+# def get_stored_username():
+#     '''get sored username if available.'''
+#     file_name = 'username.json'
+#     try :
+#         with open(file_name) as f :
+#             username = json.load(f)
+#     except FileNotFoundError :
+#         return None
+#     else:
+#         return username
     
-def greet_user():
-    username = get_stored_username()
-    if username:
-        print(f"welcome back {username}")
-    else:
-        file_name = 'username.json'
-        username = input("waht is your name : ")
-        with open(file_name,'w') as f :
-            json.dump(username,f) 
-            print(f"we'll remember you when you come back {username}")
+# def greet_user():
+#     username = get_stored_username()
+#     if username:
+#         print(f"welcome back {username}")
+#     else:
+#         file_name = 'username.json'
+#         username = input("waht is your name : ")
+#         with open(file_name,'w') as f :
+#             json.dump(username,f) 
+#             print(f"we'll remember you when you come back {username}")
+
+# from name_function import get_formated_names
+# print("Enter 'q' at any time to quit.")
+# while True:
+#     first = input("\nPlaease Give me first name : ")
+#     if first == "q":
+#         break
+#     last = input("Please give me last name : ")
+#     if last == 'q':
+#         break
+
+#     formated_name = get_formated_names(first,last)
+#     print(f"\tNeatly formatted name : {formated_name}")
+
+# def city_info(city_name,country_name):
+#     return f"{city_name.title()}, {country_name.title()}."
+
+from name_function import city_info
+import unittest
+
+class Names(unittest.TestCase):
+    def test_city_info(self):
+        assert city_info('apple','santacruz')
+
+if __name__ == '__main__':
+    unittest.main()
