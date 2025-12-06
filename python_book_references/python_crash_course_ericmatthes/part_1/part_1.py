@@ -472,12 +472,13 @@
 # def city_info(city_name,country_name):
 #     return f"{city_name.title()}, {country_name.title()}."
 
-from name_function import city_info
-import unittest
+# from name_function import city_info
+# import unittest
 
-class Names(unittest.TestCase):
-    def test_city_info(self):
-        assert city_info('apple','santacruz')
+# class Names(unittest.TestCase):
+#     def test_city_info(self):
+#         assert city_info('apple','santacruz')
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
+

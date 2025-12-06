@@ -1,0 +1,1 @@
+download pygame using '''pip install --user pygame''' on a terminal
