@@ -4,7 +4,7 @@ import sys
 import pygame
 from settings import Setting
 from ship import Ship
-
+from bullets import Bullet
 
 class AlienInvasion:
     """Overall class to manage game assets and behaviour"""
@@ -13,20 +13,21 @@ class AlienInvasion:
         print("Initializing game")
         pygame.init()
         self.settings = Setting()
-        self.screen = pygame.display.set_mode((self.settings.sceen_width,self.settings.screen_height))
+        self.screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
+        self.settings.sceen_width = self.screen.get_rect().width
+        self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption("Alien Invasion")
         self.ship = Ship(self)
-
+        self.bullets = pygame.sprite.Group()
        
         
     def run_game(self):
         """Start the main loop for the game."""
         while True:
-
             self._check_events()
-            self._update_screen()
             self.ship.update()
-
+            self.bullets.update()
+            self._update_screen()
     
         
     def _check_events(self):
@@ -34,23 +35,43 @@ class AlienInvasion:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+                
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RIGHT:
-                    self.ship.moving_right = True
-                if event.key == pygame.K_LEFT:
-                    self.ship.moving_left = True
+                self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
-                if event.key == pygame.K_RIGHT:
-                    self.ship.moving_right = False
-                if event.key == pygame.K_LEFT:
-                    self.ship.moving_left = False
-        
+                self._check_keyup_events(event)
 
+    def _check_keydown_events(self,event):
+        if event.key == pygame.K_RIGHT:
+            self.ship.moving_right = True
+        elif event.key == pygame.K_LEFT:
+            self.ship.moving_left = True
+        elif event.key == pygame.K_q :
+            print("Game exited successfully! Thanks for playing.")
+            sys.exit()
+        elif event.key == pygame.K_SPACE:
+            self._fire_bullet()
+        else:
+            pass
+    
+    def _check_keyup_events(self,event):
+        if event.key == pygame.K_RIGHT:
+            self.ship.moving_right = False
+        elif event.key == pygame.K_LEFT:
+            self.ship.moving_left = False
+        else:
+            pass
+
+    def _fire_bullet(self):
+        new_bullet = Bullet(self)
+        self.bullets.add(new_bullet)
 
     def _update_screen(self):
         '''updated images on the sceeen and flips to a new screen.'''
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
+        for bullet in self.bullets.sprites():
+            bullet.draw_bullet()
         pygame.display.flip()
 
 
