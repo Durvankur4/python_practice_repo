@@ -27,7 +27,9 @@ class AlienInvasion:
             self._check_events()
             self.ship.update()
             self.bullets.update()
+            self._update_bullets()
             self._update_screen()
+    
     
         
     def _check_events(self):
@@ -63,8 +65,17 @@ class AlienInvasion:
             pass
 
     def _fire_bullet(self):
-        new_bullet = Bullet(self)
-        self.bullets.add(new_bullet)
+        if len(self.bullets) < self.settings.bullet_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
+
+    def _update_bullets(self):
+        self._update_screen()
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
+        # print(len(self.bullets))
+        
 
     def _update_screen(self):
         '''updated images on the sceeen and flips to a new screen.'''
@@ -74,14 +85,14 @@ class AlienInvasion:
             bullet.draw_bullet()
         pygame.display.flip()
 
+    
+
 
 if __name__ == "__main__":
     ai = AlienInvasion()
     ai.run_game()
 
 
-    #this is a empty commit due to exams 
-    #i could not commit actual code to this repository
-    #sorry for iconvinience
+    
     
 
