@@ -14,3 +14,4 @@ class GameStats:
         self.game_active = False
         self.high_score = 0
         self.score = 0
+        self.level = 1

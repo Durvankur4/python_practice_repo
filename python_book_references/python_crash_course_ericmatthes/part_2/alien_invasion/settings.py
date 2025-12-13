@@ -13,7 +13,7 @@ class Setting:
         self.bullet_allowed = 3
 
         # Alien
-        self.fleet_drop_speed = 100
+        self.fleet_drop_speed = 10
 
         # Scoring
         self.alien_points = 50
