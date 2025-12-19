@@ -1,4 +1,4 @@
-# Problem 1 (Easy) — FizzBuzz variant
+# Problem 1 (Easy) - FizzBuzz variant
 # Write a function fizz_buzz(n) that returns a list of strings for numbers 1..n:
 # multiples of 3 → "Fizz"
 # multiples of 5 → "Buzz"
