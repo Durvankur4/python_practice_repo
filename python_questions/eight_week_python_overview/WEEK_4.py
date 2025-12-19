@@ -9,9 +9,9 @@
 # def my_sum(*numbers):
 #     sum = 0
 #     for num in numbers:
-#         if isinstance(num , (int,float)): 
+#         if isinstance(num , (int,float)):
 #             sum += num
-#     # print(numbers) 
+#     # print(numbers)
 #     return sum
 
 # print(my_sum(1,2,3,"abc"))
@@ -23,7 +23,7 @@
 # Each time you call the returned function, it increases the counter by 1 and returns it.
 # Example:
 # c = make_counter(10)
-# c() → 11  
+# c() → 11
 # c() → 12
 # Topics required
 # Closures
@@ -40,7 +40,7 @@
 #     count = start
 #     def inner():
 #         nonlocal count
-#         count += 1 
+#         count += 1
 #         return count
 #     return inner
 
@@ -68,7 +68,7 @@
 # Dicts as caches (cache[(args, frozenset(kwargs))] = result)
 # Tuples as hashable keys
 # If any of these feel unfamiliar, pause and review before solving.
-# 0 1 1 2 3 5 8 13 21 
+# 0 1 1 2 3 5 8 13 21
 
 # def memoization(func) :
 #     cache = {}
@@ -79,7 +79,7 @@
 #         else:
 #             result = func(*args,**kwargs)
 #             cache[key] = result
-#         return result         
+#         return result
 
 #     return wrapper
 

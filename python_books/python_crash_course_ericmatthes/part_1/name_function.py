@@ -1,6 +1,6 @@
 
 def get_formated_names(first,last):
-    '''generate a neatly formated full name.'''
+    """Generate a neatly formated full name."""
     full_name = f"{first} {last}"
     return full_name.title()
 

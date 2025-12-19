@@ -16,9 +16,9 @@
 # 1 <= nums.length <= 1000. 1 <= nums[i] <= 1000
 
 
-def getConcatenaition(nums: list[int]):
-    ans = []
-    for i in range(2):
+def getconcatenaition(nums: list[int]):
+    ans = nums
+    for _i in range(2):
         for n in nums:
             ans.append(n)
     return ans

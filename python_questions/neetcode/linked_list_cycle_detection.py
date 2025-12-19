@@ -6,18 +6,20 @@
 
 # Solution:
 class ListNode:
-    def __init__(self,val=0,next = None):
+    def __init__(self, val=0, nxt=None):
         self.val = val
-        self.next = next
+        self.next = nxt
 
-def hasCycel(head : ListNode):
-    slow,fast = head,head
+
+def hascycle(head: ListNode):
+    slow, fast = head, head
     while fast and fast.next:
         fast = fast.next.next
         slow = slow.next
         if slow == fast:
             return True
     return False
+
 
 # time complexity = O(n)
 # space complexity = O(n)

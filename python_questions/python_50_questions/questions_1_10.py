@@ -1,4 +1,4 @@
-# Level 1: Basics (1–10)
+# Level 1: Basics (1-10)
 
 # 1. Print "Hello, World!"
 # 2. Take user input for name and print a greeting.
@@ -12,11 +12,9 @@
 # 10. Create a list of 5 numbers and print sum, max, min.
 
 
-
 # 1 ---------------------------------------------------------------------#
 
 # print('hello world')
-
 
 
 # 2 ---------------------------------------------------------------------#
@@ -25,13 +23,11 @@
 # print(f'Hi {name}')
 
 
-
 # 3 ---------------------------------------------------------------------#
 
 # a = int(input())
 # b = int(input())
 # print(f"addition is {a+b}")
-
 
 
 # 4 ---------------------------------------------------------------------#
@@ -42,7 +38,7 @@
 # elif a % 2 == 1 :
 #     print("odd")
 # else :
-#     print('enter a valid number') 
+#     print('enter a valid number')
 
 # 5 ---------------------------------------------------------------------#
 
@@ -52,7 +48,7 @@
 
 # def largest_number(a,b,c):
 #     if a > b and a > c :
-#         return a 
+#         return a
 #     elif b > a and b > c :
 #         return b
 #     elif c > a and c > b :
@@ -61,14 +57,12 @@
 # print(f"the largest number is {largest_number(a,b,c)}")
 
 
-
 # 6 ---------------------------------------------------------------------#
 
 # num = input(f"enter the numeber for its table : ")
- 
+
 # for i in range(11):
 #     print(f'{i} * {num} = {i * int(num)}')
-
 
 
 # 7 ---------------------------------------------------------------------#
@@ -82,9 +76,8 @@
 #         return(1)
 #     else :
 #         return a * factorial(a-1)
-    
-# print(f'the factorial of the number {num} is : {factorial(int(num))}' )
 
+# print(f'the factorial of the number {num} is : {factorial(int(num))}' )
 
 
 # 8 ---------------------------------------------------------------------#
@@ -93,17 +86,15 @@
 # print(str1[::-1])
 
 
-
 # 9 ---------------------------------------------------------------------#
 
 # str1 = input("enter a stirng : ")
 # count = 0
 # for i in str1:
 #     if i in 'aeiouAEIOU':
-#         count +=1 
+#         count +=1
 
 # print(f'there are {count} vowels in this string')
-
 
 
 # 10 ---------------------------------------------------------------------#
@@ -122,7 +113,7 @@
 #         print(f'Max is : {max(num)}')
 #     elif choice == 3 :
 #         print(f'Min is : {min(num)}')
-#     elif choice == 4: 
+#     elif choice == 4:
 #         break
 #     else:
 #         print('enter a valid number')

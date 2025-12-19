@@ -14,20 +14,20 @@
 #     def __init__(self,owner : str ,balance : float):
 #         self.owner = owner
 #         self._balance = balance
-    
+
 #     @property
 #     def balance(self):
 #         return self._balance
-     
+
 #     def deposite(self, amt : float):
 #         if amt < 0 :
 #             raise ValueError("not enough funds")
 #         self._balance += amt
 #         print(f"credited {amt} to {self.owner}'s account")
 #         return self.balance
-    
+
 #     def withdraw(self, amt : float):
-#         if amt < 0 : 
+#         if amt < 0 :
 #             raise ValueError("not enough funds")
 #         elif amt > self._balance:
 #             print("not enough balance")
@@ -56,7 +56,7 @@
 
 
 # """
-# created a game of duel between characters below 
+# created a game of duel between characters below
 # """
 
 # class Character():
@@ -66,7 +66,7 @@
 
 #     def attack (self, target):
 #         target.hp -= 10
-    
+
 # class Mage(Character) :
 #     def __init__(self, name , hp , mana : int):
 #         super().__init__(name, hp)
@@ -93,9 +93,9 @@
 #     Soldier.attack(Wizzard)
 #     Wizzard.special(Soldier)
 #     if Soldier.hp <= 0 or Wizzard.hp <= 0:
-#         if Wizzard.hp == 0: 
+#         if Wizzard.hp == 0:
 #             print("\nwizz died")
-#         if Soldier.hp == 0: 
+#         if Soldier.hp == 0:
 #             print("\nsoldier died")
 #         break
 
@@ -123,17 +123,17 @@
 
 # class Vector:
 #     def __init__(self,values):
-#         self._vals = values 
+#         self._vals = values
 
 #     def __len__(self):
 #         return len(self._vals)
-    
+
 #     def __getitem__(self,index):
 #         return self._vals[index]
-    
+
 #     def __iter__(self):
 #         return iter(self._vals)
-    
+
 #     def __add__(self,other):
 #         if len(self)!= len(other):
 #             print("size must be same")
@@ -141,7 +141,7 @@
 #             return Vector([a+b for a, b in zip(self,other)])
 #     def __str__(self):
 #         return f"{self._vals}"
-    
+
 #     def __repr__(self):
 #         return f"Values = {self._vals}"
 

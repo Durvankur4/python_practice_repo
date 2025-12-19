@@ -16,7 +16,7 @@
 #     seen.add(item)
 #     out.append(item)
 #   return out
-  
+
 # print(dedupe([1, 2, 1, 3, 2, 4, 5]))
 
 
@@ -44,7 +44,7 @@
 
 
 # def merge_list_of_dicts(dict_list : list[dict]) -> dict :
-    
+
 #     '''
 #     this function takes the dict_list as a list of multiple dictionaries
 #     and merges them into one single dictionary called merged_dict
@@ -53,7 +53,7 @@
 #     merged_dict = {}
 
 #     for record in dict_list :
-        
+
 #         uid = record["id"]
 
 #         if uid not in merged_dict:
@@ -61,7 +61,7 @@
 #         else:
 #             merged_dict[uid].update(record)
 
-    
+
 #     return merged_dict
 
 
@@ -93,9 +93,9 @@
 #             empty[item] += 1
 #         else :
 #             empty[item] = 1
-    
+
 #     sorted_elements = sorted(empty.items(),key = lambda item : item[1],reverse= True )
-        
+
 #     print(sorted_elements)
 #     top_k = [item for item,count in sorted_elements[:k]]
 #     return  top_k

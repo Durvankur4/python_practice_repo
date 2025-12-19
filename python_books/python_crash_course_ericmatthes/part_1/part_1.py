@@ -26,7 +26,7 @@
 # print(f"{invite_list[1]} cannot join")
 # invite_list[1] = "man"
 # print(f"invite {invite_list[0]}, {invite_list[1]} ,{invite_list[2]} to dinner")
- 
+
 # print("i found bigger table")
 # invite_list.insert(1,"gian")
 # invite_list.insert(0,"thian")
@@ -122,7 +122,7 @@
 
 # prompt = "\n Tell me something, and i will repeat it back to you : "
 # prompt += "\n Enter 'quit' to end the programme."
-# message = "" 
+# message = ""
 # while message != "quit":
 #     message = input("enter the message :")
 
@@ -169,7 +169,7 @@
 #     response = input("enter your favourite place : ")
 
 #     responses[name] = response
-    
+
 #     repeat = input("would you like to let other person respond : (yes/no)").lower()
 #     if repeat == "no":
 #         polling_active = False
@@ -184,7 +184,7 @@
 # print(sandwitch_orders)
 # while sandwitch_orders:
 #     finished_sandwitch.append(sandwitch_orders.pop())
-    
+
 # print(finished_sandwitch)
 
 # list_msg = ["hi", "hello", "hui"]
@@ -196,7 +196,7 @@
 #         sent_messages.append(item)
 
 # print(list_msg)
-# send_messages(list_msg[:])   
+# send_messages(list_msg[:])
 # print(sent_messages)
 # print(list_msg)
 
@@ -226,13 +226,13 @@
 #     def __init__(self,name,age):
 #         self.name = name
 #         self.age = age
-    
-#     #these are methods and they are no diff than a function 
+
+#     #these are methods and they are no diff than a function
 #     def sit(self):
 #         print(f"{self.name} is now sitting")
 #     def roll_over(self):
 #         print(f"{self.name}is now rolling over.")
-    
+
 # my_dog = Dog('willie',6) #here my_dog is an instance of a Class and Dog is a Class
 # print(f'my dogs name is {my_dog.name} and his age is {my_dog.age}')
 # my_dog.sit()
@@ -268,7 +268,7 @@
 
 #     def describe_user(self):
 #         print(f"\nMy name is {self.first_name} {self.last_name}")
-     
+
 #     def greet_user(self):
 #         print(f"Hello {self.first_name}! nice to meet you!")
 
@@ -284,20 +284,20 @@
 #     def __init__(self,restaurant_name,cusine_type,numbers_served = 0):
 #         self.restaurant_name = restaurant_name
 #         self.cusine_type = cusine_type
-#         self.numbers_served = numbers_served 
+#         self.numbers_served = numbers_served
 
 #     def describe_restaurant(self):
 #         print(f"\nWelcome to {self.restaurant_name} restaurant.")
 #         print(f"We serve {self.cusine_type} Cusine.")
-        
+
 
 #     def open_restaurant(self):
 #         print("This Restauant is now open!")
-        
+
 #     def set_number_served(self,served_people):
 #         self.numbers_served += served_people
 #         print(f"this restaurant has served {self.numbers_served} people.")
-        
+
 
 
 # rest_1 = Restaurant("Panjabi Dhaaba","Indian",20)
@@ -314,12 +314,12 @@
 
 #     def describe_user(self):
 #         print(f"\nMy name is {self.first_name} {self.last_name}")
-     
+
 #     def greet_user(self):
 #         print(f"Hello {self.first_name}! nice to meet you!")
-    
+
 #     def increment_login_attempt(self):
-#         self.login_attempt += 1 
+#         self.login_attempt += 1
 #         print(f"login attempted {self.login_attempt} times.")
 
 #     def reset_login_attempts(self):
@@ -351,7 +351,7 @@
 # lottery_number = (1,3,'a','b')
 # winning_number = (1,'a','b',3)
 # from random import randint
-# count = 0 
+# count = 0
 
 # while True:
 #     count +=1
@@ -408,14 +408,14 @@
 # with open(file_name,'w') as f :
 #     json.dump(numbers,f)
 
-# import json 
+# import json
 # file_name = 'numbers.json'
 # with open(file_name) as f:
 #     numbers = json.load(f)
 
 # print(numbers)
 
-# import json 
+# import json
 
 # def greet_user():
 #     '''Greet the user by name.'''
@@ -426,11 +426,11 @@
 #     except FileNotFoundError :
 #         username = input("waht is your name : ")
 #         with open(file_name,'w') as f :
-#             json.dump(username,f) 
+#             json.dump(username,f)
 #             print(f"we'll remember you when you come back {username}")
 #     else:
 #         print(f"Welcome back {username}")
-        
+
 # greet_user()
 
 # ### below is the refactored code of the above so one code doesnt do everthing
@@ -444,7 +444,7 @@
 #         return None
 #     else:
 #         return username
-    
+
 # def greet_user():
 #     username = get_stored_username()
 #     if username:
@@ -453,7 +453,7 @@
 #         file_name = 'username.json'
 #         username = input("waht is your name : ")
 #         with open(file_name,'w') as f :
-#             json.dump(username,f) 
+#             json.dump(username,f)
 #             print(f"we'll remember you when you come back {username}")
 
 # from name_function import get_formated_names

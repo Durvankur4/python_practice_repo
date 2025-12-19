@@ -1,11 +1,11 @@
 import tkinter as tk
 
 button_values = [
-    ["AC", "+/-", "%", "÷"], 
-    ["7", "8", "9", "*"], 
+    ["AC", "+/-", "%", "÷"],
+    ["7", "8", "9", "*"],
     ["4", "5", "6", "-"],
     ["1", "2", "3", "+"],
-    ["0", ".", "√", "="]
+    ["0", ".", "√", "="],
 ]
 
 right_symbols = ["÷", "*", "-", "+", "="]
@@ -22,92 +22,113 @@ color_white = "white"
 
 # window setup
 window = tk.Tk()
-window.resizable(False,False)
+window.resizable(False, False)
 window.title("calculator app")
 
 # frame setup
 frame = tk.Frame(window)
-label = tk.Label(frame,font=('Arial',20),text="0",anchor='e',background=color_black,foreground=color_white,height=4,width=8)
-label.grid(row=0,column=0,columnspan= column_count,sticky="we")
+label = tk.Label(
+    frame,
+    font=("Arial", 20),
+    text="0",
+    anchor="e",
+    background=color_black,
+    foreground=color_white,
+    height=4,
+    width=8,
+)
+label.grid(row=0, column=0, columnspan=column_count, sticky="we")
 
-# A(operator)B
-A = '0'
-B = None
+# A(operator)b
+A = "0"
+b = None
 operator = None
 
-def clear_all() :
-    global A,B,operator
-    A = '0'
-    B = None
+
+def clear_all():
+    global A, operator
+    A = "0"
+    # B = None
     operator = None
 
-def remove_decimal(num) :
-    if num % 1 == 0 :
+
+def remove_decimal(num):
+    if num % 1 == 0:
         num = int(num)
     return str(num)
-    
 
-def button_Clicked(value):
-    global label,right_symbols,top_symbols,A,B,operator
-    current = label.cget('text')
-    
-    if value in top_symbols :
-        if value == 'AC':
-            clear_all()
-            label.config(text='0')
-        elif value == "+/-" :
-            result = float(current) * -1
-            label.config(text = remove_decimal(result))
-        elif value == "%" :
-            num = float(current)/100
-            label.config(text = remove_decimal(num))
 
-        
-    if value in right_symbols :
+def handle_top_symbols(value, current):
+    if value == "AC":
+        clear_all()
+        label.config(text="0")
+    elif value == "+/-":
+        result = float(current) * -1
+        label.config(text=remove_decimal(result))
+    elif value == "%":
+        num = float(current) / 100
+        label.config(text=remove_decimal(num))
 
-        if value == '=':
-            if A is not None and operator is not None :
-                B = current 
 
-                if operator=="+":
-                    result = remove_decimal(float(A)+float(B))
-                elif operator=="-":
-                    result = remove_decimal(float(A)-float(B))
-                elif operator=="÷":
-                    result = remove_decimal(float(A)/float(B))
-                elif operator=="*":
-                    result = remove_decimal(float(A)*float(B))
-                label.config(text = result)
-            clear_all()
+def calculate(op, operand_a, operand_b):
+    operations = {
+        "+": lambda a, b: a + b,
+        "-": lambda a, b: a - b,
+        "÷": lambda a, b: a / b,
+        "*": lambda a, b: a * b,
+    }
+    return remove_decimal(operations[op](float(operand_a), float(operand_b)))
 
-        if value in '÷*-+':
 
-            if operator == None:
-                A = label["text"]      # store the first number ("5")
-                label["text"] = "0"    # reset screen for second number
-                B = "0"
+def handle_equals():
+    if A is not None and operator is not None:
+        b = label.cget("text")
+        result = calculate(operator, A, b)
+        label.config(text=result)
+    clear_all()
 
-            operator = value           
-    
+
+def handle_operator(value):
+    global A, operator
+    if operator is None:
+        A = label.cget("text")
+        label.config(text="0")
+    operator = value
+
+
+def handle_number(value):
+    current = label.cget("text")
+    if current == "0":
+        label.config(text=value)
     else:
-        if value == '.': #.
-            pass
-        elif value in '0123456789':
-            if current == '0':
-                label.config(text =value)
-            else :
-                label.config(text= current+value)
-        else :
-            pass
+        label.config(text=current + value)
 
+
+def button_clicked(value):
+    if value in top_symbols:
+        handle_top_symbols(value, label.cget("text"))
+    elif value == "=":
+        handle_equals()
+    elif value in "÷*-+":
+        handle_operator(value)
+    elif value == ".":
+        pass
+    elif value in "0123456789":
+        handle_number(value)
 
 
 for i in range(row_count):
     for j in range(column_count):
         value = button_values[i][j]
-        button = tk.Button(frame,font=('Arial'),text=value,height=4,width=8,command= lambda x=value : button_Clicked(x))
-        button.grid(row=i+1,column=j ) 
-
+        button = tk.Button(
+            frame,
+            font=("Arial"),
+            text=value,
+            height=4,
+            width=8,
+            command=lambda x=value: button_clicked(x),
+        )
+        button.grid(row=i + 1, column=j)
 
 
 frame.pack()

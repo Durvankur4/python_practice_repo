@@ -48,9 +48,9 @@
 
 # Write a generator primes() that yields prime numbers forever:
 # g = primes()
-# next(g) → 2  
-# next(g) → 3  
-# next(g) → 5  
+# next(g) → 2
+# next(g) → 3
+# next(g) → 5
 # ...
 # Topics Required (IMPORTANT)
 # Before attempting, make sure you know:
@@ -68,19 +68,19 @@
 #         return True
 #     if n%2 == 0 :
 #         return False
-    
+
 #     i = 3
 #     while i * i <= n :
 #         if n%i == 0:
 #             return False
-#         i +=2 
+#         i +=2
 #     return True
 
 # def primes():
-#     n = 2 
+#     n = 2
 #     while True:
 #         if isPrime(n) :
-#             yield n 
+#             yield n
 #         n+=1
 
 # g = primes()

@@ -21,9 +21,9 @@
 
 # Solution:
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, nxt=None):
         self.val = val
-        self.next = next
+        self.next = nxt
 
 
 def merge(list1: ListNode, list2: ListNode):
@@ -32,7 +32,6 @@ def merge(list1: ListNode, list2: ListNode):
 
     while list1 and list2:
         if list1.val < list2.val:
-
             curr.next = list1
             curr = list1
             list1 = list1.next

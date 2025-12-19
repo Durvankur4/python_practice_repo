@@ -34,6 +34,7 @@
 # Attribute access via getattr
 
 import mathutils
+
 print(mathutils.square(5))
 print(mathutils.cube(3))
 

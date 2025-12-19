@@ -1,4 +1,4 @@
-# Level 4: Lists & Dictionaries (31–40)
+# Level 4: Lists & Dictionaries (31-40)
 # 31. Find the second largest number in a list.
 # 32. Merge two lists and remove duplicates.
 # 33. Sort a list in ascending and descending order.
@@ -11,7 +11,6 @@
 # 40. Find the key with the maximum value in a dictionary.
 
 
-
 # 31 ---------------------------------------------------------------------#
 
 # list_1 = [1,2,4,5,9,7,10,7,9.5,8]
@@ -19,13 +18,12 @@
 # second_largest= float()
 # for i in list_1:
 #     if i > largest :
-#         second_largest = largest 
-#         largest = i 
+#         second_largest = largest
+#         largest = i
 #     elif i > second_largest and i != largest:
 #         second_largest = i
 
 # print(second_largest)
-
 
 
 # 32 ---------------------------------------------------------------------#
@@ -40,13 +38,11 @@
 # print(list_3)
 
 
-
 # 33 ---------------------------------------------------------------------#
 
 # list_1 = [1,2,4,5,6,4,0,7,9.5,11,8]
 # list_1.sort()
 # print(list_1)
-
 
 
 # 34 ---------------------------------------------------------------------#
@@ -65,7 +61,6 @@
 # print(Counter(list_1))
 
 
-
 # 35 ---------------------------------------------------------------------#
 
 # list_1 = [1,23,4,5,6,6,9,87,6,5,0,3]
@@ -73,7 +68,6 @@
 
 # list_3 = set(list_1) & set(list_2)
 # print(list_3)
-
 
 
 # 36 ---------------------------------------------------------------------#
@@ -86,7 +80,6 @@
 # print(sum_of_dicts(var1))
 
 
-
 # 37 ---------------------------------------------------------------------#
 
 # var1 = {x:x**2 for x in range(10)}
@@ -94,7 +87,6 @@
 # for i in var1:
 #     count += 1
 # print(count)
-
 
 
 # 38 ---------------------------------------------------------------------#
@@ -105,9 +97,8 @@
 
 # for i in range(len(list1)):
 #     dict1[list1[i]] = list2[i]
-  
-# print(dict1)
 
+# print(dict1)
 
 
 # 39 ---------------------------------------------------------------------#
@@ -139,7 +130,6 @@
 
 # print(dict1)
 # print(dict2)
-
 
 
 # 40 ---------------------------------------------------------------------#

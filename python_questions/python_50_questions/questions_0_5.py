@@ -9,12 +9,11 @@
 # **Example:**
 
 # ```
-# Input: nums = [2,7,11,15], target = 9  
+# Input: nums = [2,7,11,15], target = 9
 # Output: [0,1]
 # ```
 
 # ---
-
 
 
 # def funtion(list1,target):
@@ -29,10 +28,6 @@
 # print(funtion([2,7,11,15],13))
 
 
-
-
-
-
 # ### **2️⃣ Palindrome Number**
 
 # **Problem:**
@@ -42,7 +37,7 @@
 # **Example:**
 
 # ```
-# Input: x = 121  
+# Input: x = 121
 # Output: True
 # ```
 
@@ -54,12 +49,8 @@
 #     if inpS == inpS[::-1]:
 #         return True
 #     else:
-#         return False    
+#         return False
 # print(check_palindrome(user_inp))
-
-
-
-
 
 
 # ### **3️⃣ Valid Parentheses**
@@ -74,7 +65,7 @@
 # **Example:**
 
 # ```
-# Input: s = "()[]{}"  
+# Input: s = "()[]{}"
 # Output: True
 # ```
 
@@ -85,8 +76,8 @@
 #         for char in string :
 #             if char in '({[':
 #                 stack.append(char)
-            
-            
+
+
 #             elif char in '}])':
 #                 if not stack :
 #                      print('not in order')
@@ -99,7 +90,7 @@
 #                 else :
 #                     print('this does not follow order')
 #                     return
-        
+
 #             else:
 #                  print('inorder')
 
@@ -107,12 +98,10 @@
 #              print('more opening brackets')
 #         else :
 #              print('done')
-             
+
 # paranthesis_check('{}[](){')
 # paranthesis_check('{}[](})')
 # paranthesis_check('{}[]()')
-
-
 
 
 # ### **4️⃣ Remove Duplicates from Sorted Array**
@@ -124,7 +113,7 @@
 # **Example:**
 
 # ```
-# Input: nums = [1,1,2]  
+# Input: nums = [1,1,2]
 # Output: 2, nums = [1,2,_]
 # ```
 
@@ -134,7 +123,7 @@
 # def rem_duplicates(arr):
 #     if not arr:
 #         return False
-    
+
 #     i = 0
 #     for j in range(len(arr)):
 #         if arr[j] != arr[i]:
@@ -144,12 +133,6 @@
 #     return i
 
 # print(rem_duplicates(nums))
-
-
-
-
-
-
 
 
 # ---
@@ -163,7 +146,7 @@
 # **Example:**
 
 # ```
-# Input: digits = [1,2,3]  
+# Input: digits = [1,2,3]
 # Output: [2,3,4]
 # ```
 
@@ -179,9 +162,9 @@
 # bonus
 # count vowels in a string
 
-str = input("enter a string")
+str1 = input("enter a string")
 count = 0
-for i in str.lower() :
-    if i in 'aeiou':
-        count +=1
+for i in str1.lower():
+    if i in "aeiou":
+        count += 1
 print(count)

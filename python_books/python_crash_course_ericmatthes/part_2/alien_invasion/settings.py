@@ -1,5 +1,5 @@
 class Setting:
-    """Initializing settings in the Game"""
+    """Initializing settings in the Game."""
 
     def __init__(self):
         self.sceen_width = 1200
@@ -28,14 +28,14 @@ class Setting:
         self.initalize_dynamic_settings()
 
     def initalize_dynamic_settings(self):
-        """initalize settings that change throughout the game"""
+        """Initalize settings that change throughout the game."""
         self.ship_speed = 1.5
         self.alien_speed = 1
         self.bullet_speed = 3
         self.fleet_direction = 1  # 1 is right -1 is left
 
     def increase_speed(self):
-        """increase speed settings"""
+        """Increase speed settings."""
         self.ship_speed *= self.speedup_scale
         self.bullet_speed *= self.speedup_scale
         self.alien_speed *= self.speedup_scale

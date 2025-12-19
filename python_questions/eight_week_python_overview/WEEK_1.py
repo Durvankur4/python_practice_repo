@@ -29,7 +29,6 @@
 # print(fizz_buzz(20))
 
 
-
 # Problem 2 (Medium) — Count words with filter
 # Given a list of strings, return a dict mapping words → count, but:
 # normalize to lowercase
@@ -46,12 +45,12 @@
 #         if len(i) <= 3:
 #             continue
 #         i = i.strip(PUNCT).lower()
-    
+
 #         if i in count_dict:
-#             count_dict[i]+=1 
+#             count_dict[i]+=1
 #         else:
 #             count_dict[i] =1
-        
+
 #     return count_dict
 
 # print(count_string(["HEllo","hi","hello","WTF.",'wtf?']))
@@ -95,10 +94,6 @@
 # find_max_window([1,3,-1,-3,5,3,6,7],3)
 
 
-
-
-
-
 # Example
 # Find the maximum sum of any 3 consecutive numbers in a list.
 # nums = [2, 1, 5, 1, 3, 2]
@@ -138,7 +133,7 @@
 #     for i,val in enumerate(arr):
 #         while dq and dq[0] <= i-k:
 #             dq.popleft()
-        
+
 #         while dq and arr[dq[-1]] <= val:
 #             dq.pop()
 
@@ -152,7 +147,7 @@
 
 
 # # resolution
-# from collections import deque 
+# from collections import deque
 # def sliding_window(array : list[int], k = int) -> list[int] :
 #     array_len = len(array)
 #     dq = deque()
@@ -162,7 +157,7 @@
 #         print("Enter a list of int")
 #     if isinstance(k , int):
 #         print("Enter int in second argument")
-#     if k<0 or array_len<0 or k>array_len: 
+#     if k<0 or array_len<0 or k>array_len:
 #         print("Error in Values")
 
 #     for i,val in enumerate(array):
@@ -211,7 +206,7 @@
 
 # def count_names(dict : dict[str,str]):
 #     a = {}
-    
+
 #     for i in range(0,len(dict)):
 #         item = dict[i]
 #         if item != None :
@@ -220,7 +215,7 @@
 #                 a[name] += 1
 #             else :
 #                 a[name] = 1
-    
+
 #     return a
 
 

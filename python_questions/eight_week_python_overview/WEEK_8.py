@@ -3,7 +3,7 @@
 # Using a list comprehension
 # Using map
 # Task:
-# Generate squares of numbers 0–999999 and measure both.
+# Generate squares of numbers 0-999999 and measure both.
 # Topics Required
 # timeit
 # list comprehension
@@ -20,7 +20,7 @@
 #     return {x : x **2 for x in range(0,1000000)}
 # # print(squares2())
 
-# #timing code 
+# #timing code
 # results = timeit.timeit(stmt="squares2()",setup="from __main__ import squares2",number=5)
 # print(results)
 # results = timeit.timeit(stmt="squares()",setup="from __main__ import squares",number=5)
@@ -45,7 +45,8 @@
 # Time complexity
 # Eliminating repeated work
 # Optimized solution
-import timeit 
+import timeit
+
 
 def pairs(nums, target):
     result = []
@@ -55,19 +56,31 @@ def pairs(nums, target):
                 result.append((i, j))
     return result
 
-print(timeit.timeit(stmt="pairs([x for x in range(1000)],50)",setup="from __main__ import pairs",number=1))
+
+print(
+    timeit.timeit(
+        stmt="pairs([x for x in range(1000)],50)",
+        setup="from __main__ import pairs",
+        number=1,
+    ),
+)
 
 
-def opt_pairs(nums,target):
-    seen =set()
+def opt_pairs(nums, target):
+    seen = set()
     out = []
     for n in nums:
-        comp = target - n 
+        comp = target - n
         if comp in seen:
-            out.append((n,comp))
+            out.append((n, comp))
         seen.add(n)
     return out
 
-print(timeit.timeit(stmt="opt_pairs([x for x in range(1000)],50)",number=100,setup="from __main__ import opt_pairs"))
 
-
+print(
+    timeit.timeit(
+        stmt="opt_pairs([x for x in range(1000)],50)",
+        number=100,
+        setup="from __main__ import opt_pairs",
+    ),
+)

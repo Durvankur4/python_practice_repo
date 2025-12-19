@@ -1,6 +1,6 @@
 # Quesiton:
 # Design your implementation of the linked list. You can choose to use a singly or doubly linked list.
-# A node in a singly linked list should have two attributes: val and next. val is the value of the current node, and next is a pointer/reference to the next node.
+# A node in a singly linked list should have two attributes: val and nxt. val is the value of the current node, and nxt is a pointer/reference to the nxt node.
 # If you want to use the doubly linked list, you will need one more attribute prev to indicate the previous node in the linked list. Assume all nodes in the linked list are 0-indexed.
 
 
@@ -8,63 +8,61 @@
 class ListNode:
     def __init__(self, val):
         self.val = val
-        self.next = None
+        self.nxt = None
         self.prev = None
 
 
 class MyLinkedList:
-
     def __init__(self):
         self.head = ListNode(0)
         self.tail = ListNode(0)
-        self.head.next = self.tail
+        self.head.nxt = self.tail
         self.tail.prev = self.head
 
     def get(self, index: int) -> int:
-        curr = self.head.next
+        curr = self.head.nxt
         while curr and index > 0:
-            curr = curr.next
+            curr = curr.nxt
             index -= 1
         if index == 0 and curr and curr != self.tail:
             return curr.val
-        else:
-            return -1
+        return -1
 
-    def addAtHead(self, val: int) -> None:
-        node, next, prev = ListNode(val), self.head.next, self.head
+    def addathead(self, val: int) -> None:
+        node, nxt, prev = ListNode(val), self.head.nxt, self.head
         node.prev = prev
-        node.next = next
-        prev.next = node
-        next.prev = node
+        node.nxt = nxt
+        prev.nxt = node
+        nxt.prev = node
 
-    def addAtTail(self, val: int) -> None:
-        node, next, prev = ListNode(val), self.tail, self.tail.prev
+    def addattail(self, val: int) -> None:
+        node, nxt, prev = ListNode(val), self.tail, self.tail.prev
         node.prev = prev
-        node.next = next
-        prev.next = node
-        next.prev = node
+        node.nxt = nxt
+        prev.nxt = node
+        nxt.prev = node
 
-    def addAtIndex(self, index: int, val: int) -> None:
-        curr = self.head.next
+    def addatindex(self, index: int, val: int) -> None:
+        curr = self.head.nxt
         while curr and index > 0:
-            curr = curr.next
+            curr = curr.nxt
             index -= 1
         if curr and index == 0:
-            node, next, prev = ListNode(val), curr, curr.prev
+            node, nxt, prev = ListNode(val), curr, curr.prev
             node.prev = prev
-            node.next = next
-            prev.next = node
-            next.prev = node
+            node.nxt = nxt
+            prev.nxt = node
+            nxt.prev = node
 
-    def deleteAtIndex(self, index: int) -> None:
-        curr = self.head.next
+    def deleteatindex(self, index: int) -> None:
+        curr = self.head.nxt
         while curr and index > 0:
-            curr = curr.next
+            curr = curr.nxt
             index -= 1
         if curr and index == 0 and curr != self.tail:
-            next, prev = curr.next, curr.prev
-            next.prev = curr.prev
-            prev.next = curr.next
+            nxt, prev = curr.nxt, curr.prev
+            nxt.prev = curr.prev
+            prev.nxt = curr.nxt
 
 
 # Your MyLinkedList object will be instantiated and called as such:

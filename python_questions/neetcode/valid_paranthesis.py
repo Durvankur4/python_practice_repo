@@ -1,4 +1,4 @@
-# # Quesiton:
+# Quesiton:
 # You are given a string s consisting of the following characters: '(', ')', '{', '}', '[' and ']'.
 
 # The input string s is valid if and only if:
@@ -29,13 +29,13 @@
 
 
 class Solution:
-    def isValid(self, s: str) -> bool:
+    def isvalid(self, s: str) -> bool:
         stack = []
-        openToClose = {")": "(", "}": "{", "]": "["}
+        opentoclose = {")": "(", "}": "{", "]": "["}
 
         for c in s:
-            if c in openToClose:
-                if stack and stack[-1] == openToClose(c):
+            if c in opentoclose:
+                if stack and stack[-1] == opentoclose(c):
                     stack.pop()
                 else:
                     return False

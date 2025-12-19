@@ -1,4 +1,4 @@
-# Level 5: Slightly Advanced (41–50)
+# Level 5: Slightly Advanced (41-50)
 # 41. Check if a number is an Armstrong number.
 # 42. Check if a number is a perfect number.
 # 43. Merge two dictionaries.
@@ -9,7 +9,6 @@
 # 48. Read a file and count the frequency of each word.
 # 49. Exception handling: divide two numbers safely.
 # 50. Use list comprehension to create a list of squares from 1 to 20.
-
 
 
 # 41 ---------------------------------------------------------------------#
@@ -24,9 +23,7 @@
 # if temp == int(num) :
 #     print("is armstrong")
 # else:
-#     print("is not armstrong")  
-
-
+#     print("is not armstrong")
 
 
 # 42 ---------------------------------------------------------------------#
@@ -37,13 +34,11 @@
 # for i in range(1,num):
 #     if num % i == 0 :
 #         sum_of_divisors += i
-    
+
 # if sum_of_divisors == num :
 #     print(f"the given number {num} is perfect.")
 # else:
 #     print(f"the number is not perfect.")
-
-
 
 
 # 43 ---------------------------------------------------------------------#
@@ -56,7 +51,6 @@
 # print(merged)
 
 
-
 # 44 ---------------------------------------------------------------------#
 
 # nested_list = [[1,2,3,4],['a','b','c','d']]
@@ -65,11 +59,11 @@
 #     flat=[]
 #     for i in nested_list :
 #         if isinstance(i, list):
-#             flat.extend(flatten_list(i)) 
+#             flat.extend(flatten_list(i))
 #         else:
 #             flat.append(i)
 #     return flat
-        
+
 
 # print(f"flattened list is {flatten_list(nested_list)}")
 
@@ -77,8 +71,7 @@
 
 # list1 =  [1,2,3,3,4,4,'a','b','c','d','d']
 # list2 = set(list1)
-# print(list2)  
-
+# print(list2)
 
 
 # 46 ---------------------------------------------------------------------#
@@ -89,7 +82,6 @@
 #     flat1.append(i)
 # flat1.sort()
 # print(flat1)
-
 
 
 # 47 ---------------------------------------------------------------------#
@@ -109,7 +101,7 @@
 
 # for word in words:
 #     word = word.lower()
-#     word_counts[word] = word_counts.get(word,0)+1 
+#     word_counts[word] = word_counts.get(word,0)+1
 
 # print(word_counts)
 
@@ -128,8 +120,6 @@
 #     print(e)
 
 
-
 # 50 ---------------------------------------------------------------------#
 
 # print([x**2 for x in range(1,21)])
-

@@ -4,18 +4,17 @@ import sys
 from time import sleep
 
 import pygame
-
+from alien import Alien
+from bullets import Bullet
+from button import Button
+from game_stats import GameStats
+from scoreboard import Scoreboard
 from settings import Setting
 from ship import Ship
-from bullets import Bullet
-from alien import Alien
-from game_stats import GameStats
-from button import Button
-from scoreboard import Scoreboard
 
 
 class AlienInvasion:
-    """Overall class to manage game assets and behaviour"""
+    """Overall class to manage game assets and behaviour."""
 
     def __init__(self):
         print("Initializing game")
@@ -49,7 +48,7 @@ class AlienInvasion:
             self._update_screen()
 
     def _check_events(self):
-        """responds to keypress and mouse events"""
+        """Responds to keypress and mouse events."""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -97,7 +96,7 @@ class AlienInvasion:
         self._check_bullet_alien_collision()
 
     def _check_bullet_alien_collision(self):
-        """respond to alien alien collision"""
+        """Respond to alien alien collision."""
         # check for any bullet that have hit alien
         # if so then get rid of the aien and the bullet
         # true for disappering the sprite after collision
@@ -120,7 +119,7 @@ class AlienInvasion:
             self.sb.prep_level()
 
     def _update_screen(self):
-        """updated images on the sceeen and flips to a new screen."""
+        """Updated images on the sceeen and flips to a new screen."""
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
         for bullet in self.bullets.sprites():
@@ -137,7 +136,7 @@ class AlienInvasion:
 
     def _create_fleet(self):
         # the alien png is effectively 100*100px
-        """create fleet of aliens"""
+        """Create fleet of aliens."""
         alien = Alien(self)
         alien_width, alien_height = alien.rect.size
         available_space_x = self.settings.sceen_width - (2 * alien_width)
@@ -159,7 +158,7 @@ class AlienInvasion:
 
     def _create_alien(self, alien_numebr, row_number):
         alien = Alien(self)
-        alien_width, alien_height = alien.rect.size
+        alien_width, _alien_height = alien.rect.size
         alien.x = alien_width + 2 * alien_width * alien_numebr
         alien.rect.x = alien.x
         alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
@@ -169,8 +168,11 @@ class AlienInvasion:
         self.aliens.add(alien)
 
     def _update_alien(self):
-        """check if the fleet is at an edge,
-        update postion of al alien in the fleet"""
+        """
+        Check if the fleet is at an edge.
+
+        update postion of al alien in the fleet.
+        """
         self._check_fleet_edges()
         self.aliens.update()
 
@@ -187,15 +189,14 @@ class AlienInvasion:
                 break
 
     def _change_fleet_direction(self):
-        """drop the entire fleet and change directions"""
+        """Drop the entire fleet and change directions."""
         for alien in self.aliens.sprites():
             alien.rect.y += self.settings.fleet_drop_speed
         self.settings.fleet_direction *= -1
 
     def _ship_hit(self):
-        """respond to the ship being hit by an alien."""
+        """Respond to the ship being hit by an alien."""
         if self.stats.ships_left > 0:
-
             # Decrement ships
             self.stats.ships_left -= 1
             self.sb.prep_ships()
@@ -212,7 +213,7 @@ class AlienInvasion:
             pygame.mouse.set_visible(True)
 
     def _check_alien_bottom(self):
-        """check if any alien have reached the bottom of the screen."""
+        """Check if any alien have reached the bottom of the screen."""
         screen_rect = self.screen.get_rect()
         for alien in self.aliens.sprites():
             if alien.rect.bottom >= screen_rect.bottom:
@@ -221,7 +222,7 @@ class AlienInvasion:
                 break
 
     def _check_play_button(self, mouse_pos):
-        """start new game when player clicks play"""
+        """Start new game when player clicks play."""
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
 
         if button_clicked and not self.stats.game_active:
