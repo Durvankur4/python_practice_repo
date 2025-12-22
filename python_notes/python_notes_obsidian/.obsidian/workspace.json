@@ -4,66 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "8cc77ff716653b32",
+        "id": "ee458049c1db3a90",
         "type": "tabs",
         "children": [
           {
-            "id": "ccbf0d313b97ab40",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "75fe5c7a95c9c728",
+            "id": "2108f6a962cfb369",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libraries.md",
+                "file": "re.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Libraries"
+              "title": "re"
             }
           },
           {
-            "id": "89285c6768107af7",
+            "id": "8517ef1909faf31d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "funcitons/map().md",
+                "file": "Important Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "map()"
-            }
-          },
-          {
-            "id": "a15f20ae59f99a51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts/Comprehensions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Comprehensions"
+              "title": "Important Notes"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "map",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,8 +91,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -212,23 +186,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "a15f20ae59f99a51",
+  "active": "8517ef1909faf31d",
   "lastOpenFiles": [
+    "re.md",
+    "Important Notes.md",
+    "Datatypes.md",
+    "2025-12-22.md",
+    "Libraries.md",
+    "Concepts/Comprehensions.md",
+    "funcitons/map().md",
     "basics/datatypes/args and kwargs.md",
     "basics/datatypes/fstring.md",
     "pngs/Pasted image 20251115134005.png",
-    "Datatypes.md",
-    "re.md",
-    "Libraries.md",
     "Basics of Python.md",
     "Good Questions to Practice.md",
     "DBMS CHEAT SHEET.md",
     "Libraries",
     "basics/datatypes/set().md",
     "funcitons/enumerate().md",
-    "funcitons/map().md",
     "Functions.md",
-    "Concepts/Comprehensions.md",
     "operations/Chained Conditionals.md",
     "funcitons/Lambda.md",
     "funcitons/sum().md",

@@ -1,0 +1,109 @@
+### VARIABLES :-
+    variables are lables that you can assign value to
+
+    reassiging a variable is valid
+
+
+### METHODS :-
+    method is and action that python can perform on a piece of data 
+
+
+### INTEGERS AND FLOATS :-
+    when you divide a int even with another int they result in a FLOATS
+
+    1000 is same as 1_000
+
+
+### LISTS :-
+    #removing items -
+        del statement : if you dont want to use that item
+        pop() method : if you are going to use that item as you remove it  
+        remove() method : removes the first occurance of the element 
+
+    #sorting behaviour -
+        sort() method : sorts list permanently ASCII
+        sorted() func : sorts list temporarily ASCII
+        reverse() method : only reverse doesnt sort
+
+    #list[form:upto:step] - spliting list using slice
+
+    #copying list - 
+        list1 = [1,2,3,4]
+        list2 = list1 both reference the same list
+
+        list1 = [1,2,3,4,5]
+        list2 = list1[:] list2 is stores a new copy of the list1
+
+
+### TUPLE :-
+    tuples are jsut like list but use () and are immutable
+
+    to define a tuple with one element you need to add trailing comma
+    my_tupple = (3,)
+
+
+### IF ELIF ELSE :-
+    if-elif-else this chain is powerful, but its only appropriate to use when you just need to
+    test one pass 
+    as soon as python finds one test that psses all other are skipped
+
+
+### Ditionaries :- 
+    in python dicts are a collection of key:value pair 
+
+    #accessing value in dict - 
+        get(key,option) method : 
+        if key exist and its value doesnt it returns None
+        if key doesnt exist it returns option
+
+
+### While loops :- 
+    make use of flags in while loops 
+
+
+###Functions :-
+    make use of keyword arguements by using the exact name of the patamerters in the func definition
+
+    #passing Arbitrary Number of Atguements -
+    def func_name(*keyword) in this the astrick tells python to make and empty tuple called keyword 
+    and pack wahtever value it revieves into the tuple.
+
+    #Arbitrary keyword arguements - 
+    **kwargs makes a dict of key:value pair to accept anynumber of keyword aguements
+
+###Class :- 
+    class is defining the genreal behaviour that a whole category of objects can have.
+
+    __init__(self) :- the self parameter is required in the method definition and it must come before any other param
+    method call will automatically passes the self arguement.
+
+    the two variables defined at each have the prefix self, these variables which are accessible through instance are
+    called attributes
+
+    #inheritance :- 
+    you can inherite class by using class ChildClass(ParentClass):
+    also the super().__init__(attributes of ParentClass) will add the attributes to the ChildClass 
+
+###Files and Excpetions :-
+    when you use the with in file object returned by open() is only avaliable inside the with block 
+    what contains it.
+
+    when you open file in 'w' mode Python rewites the flie entirely
+
+    you should never expose your tracback calls this might leave your files exposed to attackers 
+    instead use try and except block 
+    
+    #common errors in python :
+    SyntaxError: Incorrect code structure, such as missing colons or parentheses.
+    NameError: Using a variable or name that hasn't been defined.
+    TypeError: Performing operations on incompatible data types.
+    IndexError: Accessing a sequence index that is out of range.
+    KeyError: Referencing a dictionary key that doesn’t exist.
+    AttributeError: Accessing an attribute or method that doesn’t exist on an object.
+
+    #Refactoring :
+    when you can improve the code by breaking it down it is called Refactoring
+
+###Testing
+    use unittesting modlue
+    
