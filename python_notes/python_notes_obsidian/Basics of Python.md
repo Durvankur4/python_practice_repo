@@ -9,3 +9,5 @@
 [[Scope]]
 [[Errors]]
 [[Libraries]]
+[[Important Notes]]
+[[Sorting algorithm]]
