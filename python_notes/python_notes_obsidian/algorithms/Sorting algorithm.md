@@ -1,1 +1,3 @@
 [[Bubble]]
+[[Insertion]]
+[[Selection]]
