@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Selection.md",
+                "file": "algorithms/Insertion.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Selection"
+              "title": "Insertion"
             }
           }
         ],
@@ -188,9 +188,10 @@
   },
   "active": "bb79eba18e592409",
   "lastOpenFiles": [
-    "Selection.md",
+    "algorithms/Bubble.md",
+    "algorithms/Insertion.md",
     "algorithms/Sorting algorithm.md",
-    "Insertion.md",
+    "algorithms/Selection.md",
     "File Handeling.md",
     "Functions.md",
     "Good Questions to Practice.md",
@@ -200,7 +201,6 @@
     "loops/Loops.md",
     "basics/Important Notes.md",
     "Basics of Python.md",
-    "Bubble.md",
     "re.md",
     "algorithms",
     "Datatypes.md",
