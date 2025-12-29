@@ -39,8 +39,8 @@ class Solution:
 
     def merge(self, arr, s, m, e):
         # Copy the sorted left right half to L and R
-        L = arr[s : m + 1]
-        R = arr[m + 1 : e + 1]
+        L = arr[s : m + 1]  # noqa: N806
+        R = arr[m + 1 : e + 1]  # noqa: N806
 
         i, j, k = 0, 0, s  # index for the three arrays
 
