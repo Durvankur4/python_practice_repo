@@ -9,6 +9,8 @@
 # Hint
 # Given a m x n matrix grid which is sorted in non-increasing order both
 # row-wise and column-wise, return the number of negative numbers in grid.
+
+
 # Solution:
 class Solution:
     def count_negatives(self, grid: list[list[int]]) -> int:
