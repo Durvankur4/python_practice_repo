@@ -11,3 +11,4 @@
 [[Libraries]]
 [[Important Notes]]
 [[Sorting algorithm]]
+[[Search  Algorithms]]
