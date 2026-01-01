@@ -22,20 +22,20 @@
 # def guess(num: int) -> int:
 
 
-class Solution:
-    def guessNumber(self, n: int) -> int:
-        left = 1
-        right = n
+# class Solution:
+#     def guessNumber(self, n: int) -> int:
+#         left = 1
+#         right = n
 
-        while True:
-            m = (left + right) // 2
-            res = guess(m)
-            if res > 0:
-                left = m + 1
-            elif res < 0:
-                right = m - 1
-            else:
-                return m
+#         while True:
+#             m = (left + right) // 2
+#             res = guess(m)
+#             if res > 0:
+#                 left = m + 1
+#             elif res < 0:
+#                 right = m - 1
+#             else:
+#                 return m
 
 
 # time complexity = O(n)
