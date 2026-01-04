@@ -152,4 +152,41 @@
 #                 res = max(res,i - idx)
 #         return res
 # 930
-# 1248 too hard for my understanding currently
+# 1248 both too hard for my understanding currently
+
+# # 643
+# class Solution:
+#     def findMaxAverage(self, nums: List[int], k: int) -> float:
+#         max_avg = 0
+#         l = 0
+#         curr_sum = 0
+
+#         #to grow the window
+#         for r in range(k):
+#             curr_sum += nums[r]
+#         max_avg = curr_sum / k
+
+#         #slide the window
+#         for r in range(k,len(nums)):
+#             curr_sum = curr_sum + nums[r] - nums[l]
+#             max_avg = max(max_avg,curr_sum/k)
+#             l+=1
+
+#         return max_avg
+
+# #209
+# class Solution:
+#     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+#         l= 0
+#         min_len = float('inf')
+#         sum = 0
+
+#         for r in range(len(nums)):
+#             sum += nums[r]
+
+#             while sum >= target:
+#                 min_len = min(min_len,r-l+1)
+#                 sum -= nums[l]
+#                 l+=1
+
+#         return 0 if min_len == float('inf') else min_len
