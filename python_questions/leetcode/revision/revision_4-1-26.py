@@ -4,6 +4,7 @@
 # SET 1 — PREFIX SUM FUNDAMENTALS
 # Instruction: Do NOT code first. Write the prefix sum array and explain what each index represents.
 # 1480 - Running Sum of 1D Array
+
 # 724 - Find Pivot Index
 # 303 - Range Sum Query - Immutable
 # Goal: Prefix sums should feel obvious, not clever.
@@ -70,3 +71,85 @@
 # classify the pattern in under 30 seconds
 # explain the core idea without code
 # The problem is locked in memory.
+
+
+# answers
+# 1480
+# class Solution:
+#     def runningSum(self, nums: List[int]) -> List[int]:
+#         cur_sum = 0
+#         ans = [0] * len(nums)
+#         for i in range(len(nums)):
+#             cur_sum += nums[i]
+#             ans[i] = cur_sum
+#         return ans
+
+# 725?
+# class Solution:
+#     def pivotIndex(self, nums: List[int]) -> int:
+#         total = sum(nums)
+#         leftsum = 0
+#         for i in range(len(nums)):
+#             rightsum = total - leftsum - nums[i]
+#             if rightsum == leftsum :
+#                 return i
+#             leftsum += nums[i]
+#         return -1
+
+# 303
+# class NumArray:
+
+#     def __init__(self, nums: List[int]):
+#         self.nums = nums
+#         self.ps = [0]* (len(nums)+1)
+#         for i in range(1,len(nums)+1):
+#             self.ps[i] = self.ps[i-1] + self.nums[i-1]
+
+#     def sumRange(self, left: int, right: int) -> int:
+#         return self.ps[right+1] - self.ps[left]
+
+
+# # 560
+# class Solution:
+#     def subarraySum(self, nums: List[int], k: int) -> int:
+#         total = 0
+#         dict = {}
+#         count = 0
+
+#         for i in range(len(nums)):
+#             total   += nums[i]
+#             if total == k:
+#                 count += 1
+#             if (total-k) in dict:
+#                 count += dict[total-k]
+#             if total in dict:
+#                 dict[total] +=1
+#             else:
+#                 dict[total] = 1
+#         return count
+
+# 525: very hard and non intutive
+# class Solution:
+#     def findMaxLength(self, nums: List[int]) -> int:
+#         zero, one  = 0,0
+#         res = 0
+#         dict = {} #count[1] - count[0] -> index i
+
+#         for i,n in enumerate(nums):
+#             if n == 0 :
+#                 zero += 1
+#             else:
+#                 one += 1
+
+#             if  one-zero not in dict:
+#                 dict[one-zero] = i
+
+#             # update res
+#             if zero == one :
+#                 res = zero + one
+#             else:
+#                 idx = dict[one-zero]
+#                 res = max(res,i - idx)
+#         return res
+# 930
+# 1248 too hard for my understanding currently
