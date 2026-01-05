@@ -256,3 +256,65 @@
 #             else:
 #                 l+=1
 #         return max_cap
+
+# 75
+# class Solution:
+#     def sortColors(self, nums: List[int]) -> None:
+#         """
+#         Do not return anything, modify nums in-place instead.
+#         """
+#         array = [0]* 3
+
+#         for num in nums :
+#             array[num] += 1
+#         idx = 0
+
+#         for i in range(3):
+#             while array[i]:
+#                 nums[idx] = i
+#                 array[i] -= 1
+#                 idx +=1
+
+# #121
+# class Solution:
+#     def maxProfit(self, prices: List[int]) -> int:
+#         cheapest = float('inf')
+#         max_profit = 0
+#         curr_profit= 0
+
+#         for  r in range(len(prices)):
+#             cheapest = min(cheapest,prices[r])
+#             curr_profit = prices[r] - cheapest
+#             max_profit = max(max_profit,curr_profit)
+#         return max_profit
+
+# 344
+# class Solution:
+#     def increasingTriplet(self, nums: List[int]) -> bool:
+#         i=0
+#         first = float('inf')
+#         second = float('inf')
+#         while i<len(nums):
+#             n = nums[i]
+#             if n<=first :
+#                 first = n
+#             elif n<=second:
+#                 second = n
+#             else:
+#                 return True
+#             i+=1
+#         return False
+
+# 53
+# class Solution:
+#     def maxSubArray(self, nums: List[int]) -> int:
+#         curr_sum = 0
+#         max_sum = nums[0]
+
+#         for i in range(len(nums)):
+#             curr_sum += nums[i]
+#             max_sum = max(curr_sum,max_sum)
+#             if curr_sum < 0:
+#                 curr_sum = 0
+
+#         return max_sum
