@@ -215,3 +215,44 @@
 
 #             max_fruits = max(max_fruits ,count)
 #         return max_fruits
+
+
+# # 1004
+# class Solution:
+#     def longestOnes(self, nums: List[int], k: int) -> int:
+#         l = 0
+#         counter = 0
+#         freq = {0:0,1:0}
+#         max_window = float('-inf')
+
+#         for r in range(len(nums)):
+#             freq[nums[r]] += 1
+#             counter += 1
+
+#             while freq[0] > k:
+#                 freq[nums[l]] -= 1
+#                 counter -= 1
+#                 l+= 1
+
+#             max_window = max(max_window,counter)
+#         return max_window
+
+# #11
+# class Solution:
+#     def maxArea(self, height: List[int]) -> int:
+#         curr_cap = 0
+#         n = len(height)
+#         l,r = 0, n-1
+#         max_cap = float('-inf')
+
+#         while True:
+#             curr_cap = min(height[l],height[r]) * (r - l)
+#             max_cap = max(max_cap,curr_cap)
+
+#             if r == l :
+#                 break
+#             if height[l]>height[r]:
+#                 r -= 1
+#             else:
+#                 l+=1
+#         return max_cap
