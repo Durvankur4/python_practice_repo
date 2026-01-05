@@ -318,3 +318,7 @@
 #                 curr_sum = 0
 
 #         return max_sum
+
+# 152 very hard
+# 42 hard
+# 31 hardddddddd
