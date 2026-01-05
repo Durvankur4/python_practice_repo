@@ -190,3 +190,28 @@
 #                 l+=1
 
 #         return 0 if min_len == float('inf') else min_len
+
+# # 904
+# class Solution:
+#     def totalFruit(self, fruits: List[int]) -> int:
+#         count = 0
+#         dict = collections.defaultdict(int)
+#         l = 0
+#         max_fruits = float('-inf')
+
+#         for r in range(len(fruits)):
+#             #expand
+#             f = fruits[r]
+#             count += 1
+#             dict[f] += 1
+#             #shrink until valid
+#             while len(dict)>2:
+#                 l_f = fruits[l]
+#                 dict[l_f] -= 1
+#                 count -= 1
+#                 if dict[l_f] == 0:
+#                     dict.pop(l_f)
+#                 l += 1
+
+#             max_fruits = max(max_fruits ,count)
+#         return max_fruits
