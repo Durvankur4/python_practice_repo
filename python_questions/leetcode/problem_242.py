@@ -1,22 +1,16 @@
 # # Quesiton:
-# 17. Contains Duplicate
+# 242. Valid Anagram
 # Solved
 # Easy
 # Topics
 # premium lock icon
 # Companies
-# Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct
+# Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+# # # Solution:
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
 
-# # Solution:
-# class Solution:
-#     def containsDuplicate(self, nums: List[int]) -> bool:
-#         sett = set()
-#         for num in nums:
-#             if num in sett:
-#                 return True
-#             else:
-#                 sett.add(num)
-#         return False
 
 # time complexity = O(n)
 # space complexity = O(n)

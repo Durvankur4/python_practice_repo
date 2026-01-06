@@ -1,4 +1,4 @@
-# # Quesiton:
+# Quesiton:
 # 17. Contains Duplicate
 # Solved
 # Easy
