@@ -1,0 +1,26 @@
+Day 1
+Solved: X/10
+Easy: X
+Medium: X
+Hard: X
+
+Solved without help:
+- 1480
+- 724
+- 930 
+Needed hints:
+- 560
+- 209
+
+Failed:
+- 525
+- 1248
+- 904
+- 76
+
+Patterns learned:
+- ...
+
+Blockers:
+- Prefix sum + hash map 
+- three pointer sliding window
